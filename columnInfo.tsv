@@ -1,0 +1,73 @@
+ID	PlannedTreatment	Experience	Batch
+BWF101	win	win	1
+BLD103	loss	loss	1
+BWG106	win	win	1
+BLE107	loss	draw	1
+BWB110	win	win	1
+BLA112	loss	loss	1
+BLF115	loss	draw	1
+BWE119	win	draw	1
+BLD120	loss	loss	1
+BWG122	win	draw	1
+BLB123	loss	draw	1
+BWA129	win	draw	1
+BLF136	loss	loss	1
+BWE137	win	draw	1
+BLG138	loss	draw	1
+BWA140	win	draw	1
+BLB166	loss	loss	1
+BWD151	win	draw	1
+BWF156	win	draw	1
+BLE104	loss	upset	1
+BWD105	win	win	1
+BLG109	loss	loss	1
+BWB165	win	draw	1
+BLA164	loss	draw	1
+BWF202	win	win	2
+BLE206	loss		2
+BWD210	win		2
+BLG213	loss		2
+BWB214	win		2
+BLA215	loss		2
+BLF223	loss		2
+BWE224	win		2
+BLD260	loss		2
+BWG226	win		2
+BLB227	loss		2
+BWA228	win		2
+BLF233	loss	upset	2
+BWE235	win		2
+BLD237	loss		2
+BWG238	win		2
+BLB240	loss		2
+BWA242	win		2
+BWF247	win	draw	2
+BLE248	loss		2
+BWD250	win		2
+BLG251	loss		2
+BWB252	win		2
+BLA253	loss		2
+BLF382	loss	draw	3
+BWE303	win		3
+BLD304	loss		3
+BWG305	win		3
+BLB306	loss		3
+BWA307	win		3
+BWF316	win		3
+BLE317	loss		3
+BWD318	win		3
+BLG319	loss		3
+BWB383	win		3
+BLA322	loss		3
+BWG386	win		3
+BWF327	win		3
+BLE384	loss		3
+BWD329	win		3
+BLG330	loss		3
+BWB331	win		3
+BLA332	loss		3
+BLF338	loss		3
+BWE340	win		3
+BLB351	loss		3
+BLD374	loss		3
+BWA377	win		3
