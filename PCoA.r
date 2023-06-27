@@ -28,14 +28,20 @@ countdata <- countdata_1[keep,] #formatting for organizing the kept rows that su
 
 countdata <- round(countdata)
 
-#countdata <- countdata[, c(1,2,3,4,5,6,7,8,9,10,11,12)] #select on timepoint one (day 9)
-#countdata <- countdata[, c(13,14,15,16,17,18,19,20,21,22,23,24)] #select on timepoint two (day 29)
-#countdata <- countdata[, c(13,14,17,18,21,23)] #select on timepoint two (day 29) and LU (GOL) only
+## Need to sort both so that they are same order
+countdata <- countdata[,order(colnames(countdata))]
 
 coldata <- read.delim("./columnInfo.txt", header=TRUE, row.names=1) #use all_v3 for all data
+coldata <- coldata[order(rownames(coldata)),]
+
+
+## Here I drop controls, since they are not quite balanced
+#coldata <- coldata[-36:-68,]
+#countdata <-countdata[,-36:-68]
 
 #ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ POP*TREATMENT) #use POP*TREATMENT for tp 1 and 2, POP*TREATMENT*TP for all data
-ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Experience + (1|Batch))
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Experience ) # Batch effects break here because of redundancy breaking rank
+
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
