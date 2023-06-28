@@ -1,10 +1,6 @@
-source('http://bioconductor.org/biocLite.R')
-biocLite('DESeq2')
-biocLite("edgeR")
-biocLite("limma")
-biocLite("statmod")
-biocLite("affycoretools")
-biocLite("ReportingTools")
+
+BiocManager::install('DESeq2','edgeR','limma','statmod','affycoretools','ReportingTools')
+
 install.packages("pheatmap")
 install.packages("vegan")
 install.packages("ape")
@@ -40,12 +36,13 @@ coldata <- coldata[order(rownames(coldata)),]
 #countdata <-countdata[,-36:-68]
 
 #ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ POP*TREATMENT) #use POP*TREATMENT for tp 1 and 2, POP*TREATMENT*TP for all data
-ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Experience ) # Batch effects break here because of redundancy breaking rank
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Experience + Batch) # Batch effects break can't be random effect here
 
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
-res <- results(ddsFull)
+
+res <- results(ddsFull,contrast=c('PlannedTreatment','win','loss'))
 res
 resOrdered <- res[order(res$padj),]
 head(resOrdered)
@@ -53,6 +50,7 @@ sum(res$padj<0.05, na.rm=TRUE)
 
 
 rld <- rlogTransformation(ddsFull)
+#rld <- vst(ddsFull) # Use if there are many samples (>50)
 
 # assembling table of conditions to lable PCoA plot:
 # (in the chunk below, replace factor1 and factor2 with your actual factor names from myConditions table)
