@@ -30,17 +30,35 @@ countdata <- countdata[,order(colnames(countdata))]
 coldata <- read.delim("./columnInfo.txt", header=TRUE, row.names=1) #use all_v3 for all data
 coldata <- coldata[order(rownames(coldata)),]
 
+win_rows <- coldata$PlannedTreatment == 'win'
+loss_rows <- coldata$PlannedTreatment == 'loss'
+control_rows <- coldata$PlannedTreatment == 'control'
 
-## Here I drop controls, since they are not quite balanced
+col_win <- coldata[win_rows,]
+col_loss <- coldata[loss_rows,]
+col_c <- coldata[control_rows,]
+
+win_counts <- countdata[,win_rows]
+loss_counts <- countdata[,loss_rows]
+control_counts <- countdata[,control_rows]
+
+## Here I can drop controls, since they are not quite balanced
 #coldata <- coldata[-36:-68,]
 #countdata <-countdata[,-36:-68]
 
 #ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ POP*TREATMENT) #use POP*TREATMENT for tp 1 and 2, POP*TREATMENT*TP for all data
-ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Experience + Batch) # Batch effects break can't be random effect here
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Time + Batch) # Batch effects break can't be random effect here
+
+ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, design = ~ Batch + Time) # Batch effects break can't be random effect here
+ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) # Batch effects break can't be random effect here
+ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) # Batch effects break can't be random effect here
 
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
-head(ddsFull)
+#head(ddsFull)
+ddsWin <- DESeq(ddsWinTable)
+ddsLoss <- DESeq(ddsLossTable)
+ddsControl <- DESeq(ddsControlTable)
 
 res <- results(ddsFull,contrast=c('PlannedTreatment','win','loss'))
 res
