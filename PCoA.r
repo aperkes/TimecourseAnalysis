@@ -30,6 +30,12 @@ countdata <- countdata[,order(colnames(countdata))]
 coldata <- read.delim("./columnInfo.txt", header=TRUE, row.names=1) #use all_v3 for all data
 coldata <- coldata[order(rownames(coldata)),]
 
+## optionally drop the first batch to remove batch effect
+countdata <- countdata[,coldata$Batch != 1]
+coldata <- coldata[coldata$Batch != 1,]
+
+
+
 win_rows <- coldata$PlannedTreatment == 'win'
 loss_rows <- coldata$PlannedTreatment == 'loss'
 control_rows <- coldata$PlannedTreatment == 'control'
@@ -47,18 +53,26 @@ control_counts <- countdata[,control_rows]
 #countdata <-countdata[,-36:-68]
 
 #ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ POP*TREATMENT) #use POP*TREATMENT for tp 1 and 2, POP*TREATMENT*TP for all data
-ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ PlannedTreatment + Time + Batch) # Batch effects break can't be random effect here
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ Batch + PlannedTreatment + Time) # Batch effects can't be random effect here
+ddsInteractionCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ Batch + PlannedTreatment*Time) # Batch effects can't be random effect here
 
-ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, design = ~ Batch + Time) # Batch effects break can't be random effect here
-ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) # Batch effects break can't be random effect here
-ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) # Batch effects break can't be random effect here
 
+ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, design = ~ Batch + Time) 
+ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) 
+ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) 
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
-#head(ddsFull)
+head(ddsFull)
+
 ddsWin <- DESeq(ddsWinTable)
 ddsLoss <- DESeq(ddsLossTable)
 ddsControl <- DESeq(ddsControlTable)
+
+res_win <- results(ddsWin,contrast=c('Time','A','F'))
+res_win
+rwinOrdered <- res_win[order(res_win$padj),]
+head(rwinOrdered)
+sum(res_win$padj<0.05, na.rm=TRUE)
 
 res <- results(ddsFull,contrast=c('PlannedTreatment','win','loss'))
 res
@@ -67,16 +81,31 @@ head(resOrdered)
 sum(res$padj<0.05, na.rm=TRUE)
 
 
-rld <- rlogTransformation(ddsFull)
-#rld <- vst(ddsFull) # Use if there are many samples (>50)
 
-# assembling table of conditions to lable PCoA plot:
+ddsSelect <- ddsLoss
+#ddsSelect <- ddsLoss
+ddsSelect <- ddsControl
+
+res <- results(ddsSelect,contrast=c('Time','A','F'))
+resOrdered <- res[order(res$padj),]
+head(resOrdered)
+sum(res$padj<0.05,na.rm=TRUE)
+
+
+
+#rld <- rlogTransformation(ddsFull) # Not sure whether there are advantages
+rld <- vst(ddsSelect) # Use if there are many samples (>30)
+
+# assembling table of conditions to label PCoA plot:
+
+# There's a big batch effect, so for the PCA to be useful, 
+# probably best to drop the first batch. Or average treatments.
+
 # (in the chunk below, replace factor1 and factor2 with your actual factor names from myConditions table)
-factor1 <- as.character(colData(ddsFull)$TREATTP) #select for all data
-factor2 <- as.character(colData(ddsFull)$POP) #select for all data and tp1 and tp2
-factor3 <- as.character(colData(ddsFull)$condition) #select for all data and tp 1 and tp2
-factor4 <- as.character(colData(ddsFull)$TREATMENT) #select for all data and tp 1 and tp2
-factor5 <- as.character(colData(ddsFull)$TP) #select for all data
+factor1 <- as.character(colData(ddsSelect)$PlannedTreatment) 
+factor2 <- as.character(colData(ddsSelect)$Experience) 
+factor3 <- as.character(colData(ddsSelect)$Batch) 
+factor4 <- as.character(colData(ddsSelect)$Time) 
 
 
 
@@ -85,14 +114,17 @@ vsd <- assay(rld)
 dds.pcoa <- pcoa(vegdist(t(vsd),method="manhattan")/1000)
 scores <- dds.pcoa$vectors
 percent <- dds.pcoa$values$Eigenvalues
-percent / sum(percent) #percent for each axes
+weights <- percent / sum(percent) * 100 #percent for each axes
+
 
 #plot PC axis 1 and 2 for all data
-plot(scores[,1], scores[,2], col=c("blue", "orange")[as.numeric(as.factor(factor2))], pch=c(0, 15, 1, 16)[as.numeric(as.factor(factor1))], xlab = "PC1 (42.47%)", ylab = "PC2 (17.22%)")
-ordispider(scores,factor3, col=c("blue", "blue", "blue", "blue", "orange", "orange", "orange", "orange"))
+xLab <- paste("PC1 (",round(weights[1],3),"%)")
+yLab <- paste("PC2 (",round(weights[2],3),"%)")
+plot(scores[,1], scores[,2], col=c("darkblue","blue","yellow","orange","red","lightblue")[as.numeric(as.factor(factor4))], pch=c(0, 15, 1, 16)[as.numeric(as.factor(factor1))], xlab = xLab, ylab = yLab)
+ordispider(scores,factor4, col=c("darkblue","blue","yellow","orange","red","lightblue"))
 
 
-#plot PC axis 3 and 4 for all data
+ $#plot PC axis 3 and 4 for all data
 plot(scores[,3], scores[,4], col=c("blue", "orange")[as.numeric(as.factor(factor2))], pch=c(0, 15, 1, 16)[as.numeric(as.factor(factor1))], xlab = "PC1 (42.47%)", ylab = "PC2 (17.22%)")
 
 
