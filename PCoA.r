@@ -35,18 +35,21 @@ countdata <- countdata[,coldata$Batch != 1]
 coldata <- coldata[coldata$Batch != 1,]
 
 
-
-win_rows <- coldata$PlannedTreatment == 'win'
-loss_rows <- coldata$PlannedTreatment == 'loss'
-control_rows <- coldata$PlannedTreatment == 'control'
+# Include this last row if you want to use controlA as a t0 comparison
+win_rows <- coldata$PlannedTreatment == 'win' | coldata$Time == 'A0'
+loss_rows <- coldata$PlannedTreatment == 'loss' | coldata$Time == 'A0'
+control_rows <- coldata$PlannedTreatment == 'control' 
+B_rows <- coldata$Time == 'B'
 
 col_win <- coldata[win_rows,]
 col_loss <- coldata[loss_rows,]
 col_c <- coldata[control_rows,]
+col_B <- coldata[B_rows,]
 
 win_counts <- countdata[,win_rows]
 loss_counts <- countdata[,loss_rows]
 control_counts <- countdata[,control_rows]
+B_counts <- countdata[,B_rows]
 
 ## Here I can drop controls, since they are not quite balanced
 #coldata <- coldata[-36:-68,]
@@ -60,6 +63,7 @@ ddsInteractionCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=
 ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, design = ~ Batch + Time) 
 ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) 
 ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) 
+ddsBTable <- DESeqDataSetFromMatrix(countData=B_counts, colData=col_B, design = ~ Batch + PlannedTreatment) 
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
@@ -67,8 +71,9 @@ head(ddsFull)
 ddsWin <- DESeq(ddsWinTable)
 ddsLoss <- DESeq(ddsLossTable)
 ddsControl <- DESeq(ddsControlTable)
+ddsB <- DESeq(ddsBTable)
 
-res_win <- results(ddsWin,contrast=c('Time','A','F'))
+res_win <- results(ddsWin,contrast=c('Time','F','A0'))
 res_win
 rwinOrdered <- res_win[order(res_win$padj),]
 head(rwinOrdered)
@@ -82,18 +87,20 @@ sum(res$padj<0.05, na.rm=TRUE)
 
 
 
+ddsSelect <- ddsWin
 ddsSelect <- ddsLoss
-#ddsSelect <- ddsLoss
 ddsSelect <- ddsControl
+ddsSelect <- ddsB
 
-res <- results(ddsSelect,contrast=c('Time','A','F'))
+res <- results(ddsSelect,contrast=c('Time','A0','F'))
 resOrdered <- res[order(res$padj),]
 head(resOrdered)
 sum(res$padj<0.05,na.rm=TRUE)
 
 
 
-#rld <- rlogTransformation(ddsFull) # Not sure whether there are advantages
+rld <- rlogTransformation(ddsSelect) # Not sure whether there are advantages
+
 rld <- vst(ddsSelect) # Use if there are many samples (>30)
 
 # assembling table of conditions to label PCoA plot:
@@ -120,6 +127,12 @@ weights <- percent / sum(percent) * 100 #percent for each axes
 #plot PC axis 1 and 2 for all data
 xLab <- paste("PC1 (",round(weights[1],3),"%)")
 yLab <- paste("PC2 (",round(weights[2],3),"%)")
+
+## For just time = B
+plot(scores[,1], scores[,2], col=c("green","red","grey")[as.numeric(as.factor(factor1))], pch=c(0, 15, 1)[as.numeric(as.factor(factor1))], xlab = xLab, ylab = yLab)
+ordispider(scores,factor1, col=c("darkgreen","darkred","darkgrey"))
+
+
 plot(scores[,1], scores[,2], col=c("darkblue","blue","yellow","orange","red","lightblue")[as.numeric(as.factor(factor4))], pch=c(0, 15, 1, 16)[as.numeric(as.factor(factor1))], xlab = xLab, ylab = yLab)
 ordispider(scores,factor4, col=c("darkblue","blue","yellow","orange","red","lightblue"))
 
