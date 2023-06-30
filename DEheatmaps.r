@@ -97,7 +97,7 @@ sum(res$padj<0.05, na.rm=TRUE)
 
 ddsSelect <- ddsWin
 ddsSelect <- ddsLoss
-#ddsSelect <- ddsControl
+ddsSelect <- ddsControl
 
 res <- results(ddsSelect,contrast=c('Time','A','F'))
 resOrdered <- res[order(res$padj),]
@@ -109,20 +109,33 @@ sum(res$padj<0.05,na.rm=TRUE)
 
 #rld <- rlogTransformation(ddsFull) # Not sure whether there are advantages
 rld <- vst(ddsSelect) # Use if there are many samples (>30)
-rlc_control <- vst(ddsControl)
+rld_control <- vst(ddsControl)
+rld_win <- vst(ddsWin)
 
 normed_counts = assay(rld)
 normed_controls = assay(rlc_control)
 
+## IF winner: 
 means_X = rowMeans(normed_counts[,1:4])
-
-
 means_A <- rowMeans(normed_counts[,5:8])
 means_C <- rowMeans(normed_counts[,25:28]) ## I used G instead of C, it was dumb and I'm sorry
 means_B <- rowMeans(normed_counts[,9:12])
 means_D <- rowMeans(normed_counts[,13:16])
 means_E <- rowMeans(normed_counts[,17:20])
 means_F <- rowMeans(normed_counts[,21:24])
+
+#IF loser: 
+means_X = rowMeans(normed_counts[,25:28])
+
+# If control:
+means_X = rowMeans(normed_counts[,1:4])
+
+means_A <- rowMeans(normed_counts[,1:4])
+means_C <- rowMeans(normed_counts[,21:24]) ## I used G instead of C, it was dumb and I'm sorry
+means_B <- rowMeans(normed_counts[,5:8])
+means_D <- rowMeans(normed_counts[,9:12])
+means_E <- rowMeans(normed_counts[,13:16])
+means_F <- rowMeans(normed_counts[,17:20])
 
 
 ## There is absolutely an easier way to do this, 
@@ -141,7 +154,7 @@ m <- matrix(c(diff_XX,diff_AA,diff_AB,diff_AC,diff_AD,diff_AE,diff_AF),ncol=7)
 mean_all <- rowMeans(as.matrix(m))
 
 order_by_col = order(m[,3])
-order_by_mean = order(mean_all)
+order_by_mean = order(mean_all) ## What if we order it by win mean? 
 
 m_sorted <- m[order(m[,3]),]
 m_sorted <- m[order(mean_all),]
@@ -150,8 +163,8 @@ head(m_sorted)
 
 #m_sorted <- matrix(as.numeric(m_sorted),ncol=ncol(m_sorted))
 
-m_top = head(m_sorted,n=100)
-m_bottom = tail(m_sorted,n=100)
+m_top = head(m_sorted,n=500)
+m_bottom = tail(m_sorted,n=500)
 
 m_extrema = rbind(m_top,m_bottom)
 
