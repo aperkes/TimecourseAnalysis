@@ -71,11 +71,11 @@ BWE340	win	unknown	3	E
 BLB351	loss	unknown	3	B
 BLD374	loss	unknown	3	D
 BWA377	win	unknown	3	A
-BSA114	control	control	1	A
-BSA232	control	control	2	A
-BSA246	control	control	2	A
-BSA326	control	control	3	A
-BSA385	control	control	3	A
+BSA114	control	control	1	A0
+BSA232	control	control	2	A0
+BSA246	control	control	2	A0
+BSA326	control	control	3	A0
+BSA385	control	control	3	A0
 BSB219	control	control	2	B
 BSB259	control	control	2	B
 BSB313	control	control	3	B
