@@ -85,7 +85,7 @@ BSD169	control	control	1	D
 BSD218	control	control	2	D
 BSD258	control	control	2	D
 BSD312	control	control	3	D
-BSD334	control	control	3	D
+BSG334	control	control	3	G
 BSD379	control	control	3	D
 BSE133	control	control	1	E
 BSE167	control	control	1	E
