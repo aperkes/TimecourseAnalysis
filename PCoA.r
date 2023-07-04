@@ -40,16 +40,19 @@ win_rows <- coldata$PlannedTreatment == 'win' | coldata$Time == 'A0'
 loss_rows <- coldata$PlannedTreatment == 'loss' | coldata$Time == 'A0'
 control_rows <- coldata$PlannedTreatment == 'control' 
 B_rows <- coldata$Time == 'B'
+F_rows <- coldata$Time == 'F'
 
 col_win <- coldata[win_rows,]
 col_loss <- coldata[loss_rows,]
 col_c <- coldata[control_rows,]
 col_B <- coldata[B_rows,]
+col_F <- coldata[F_rows,]
 
 win_counts <- countdata[,win_rows]
 loss_counts <- countdata[,loss_rows]
 control_counts <- countdata[,control_rows]
 B_counts <- countdata[,B_rows]
+F_counts <- countdata[,F_rows]
 
 ## Here I can drop controls, since they are not quite balanced
 #coldata <- coldata[-36:-68,]
@@ -64,6 +67,7 @@ ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, des
 ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) 
 ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) 
 ddsBTable <- DESeqDataSetFromMatrix(countData=B_counts, colData=col_B, design = ~ Batch + PlannedTreatment) 
+ddsFTable <- DESeqDataSetFromMatrix(countData=F_counts, colData=col_F, design = ~ Batch + PlannedTreatment) 
 
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
@@ -72,6 +76,7 @@ ddsWin <- DESeq(ddsWinTable)
 ddsLoss <- DESeq(ddsLossTable)
 ddsControl <- DESeq(ddsControlTable)
 ddsB <- DESeq(ddsBTable)
+ddsF <- DESeq(ddsFTable)
 
 res_win <- results(ddsWin,contrast=c('Time','F','A0'))
 res_win
@@ -86,18 +91,21 @@ head(resOrdered)
 sum(res$padj<0.05, na.rm=TRUE)
 
 
+ddsSelect <-ddsFull
 
 ddsSelect <- ddsWin
 ddsSelect <- ddsLoss
 ddsSelect <- ddsControl
 ddsSelect <- ddsB
+ddsSelect <- ddsF
 
-res <- results(ddsSelect,contrast=c('Time','A0','F'))
+res <- results(ddsSelect,contrast=c('PlannedTreatment','win','loss'))
+#res <- results(ddsSelect,contrast=c('Time','A0','F'))
 resOrdered <- res[order(res$padj),]
 head(resOrdered)
 sum(res$padj<0.05,na.rm=TRUE)
 
-
+#plotMA(res)
 
 rld <- rlogTransformation(ddsSelect) # Not sure whether there are advantages
 
@@ -127,6 +135,12 @@ weights <- percent / sum(percent) * 100 #percent for each axes
 #plot PC axis 1 and 2 for all data
 xLab <- paste("PC1 (",round(weights[1],3),"%)")
 yLab <- paste("PC2 (",round(weights[2],3),"%)")
+
+## For batches:
+plot(scores[,1], scores[,2], col=c("blue","red","orange")[as.numeric(as.factor(factor3))], pch=c(17, 4, 16)[as.numeric(as.factor(factor1))], xlab = xLab, ylab = yLab)
+ordispider(scores,factor3, col=c("blue","red","orange"))
+
+
 
 ## For just time = B
 plot(scores[,1], scores[,2], col=c("green","red","grey")[as.numeric(as.factor(factor1))], pch=c(0, 15, 1)[as.numeric(as.factor(factor1))], xlab = xLab, ylab = yLab)
