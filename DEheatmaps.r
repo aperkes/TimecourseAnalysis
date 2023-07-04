@@ -16,8 +16,9 @@ library('vegan')
 library('ape')
 
 setwd("/data/sequencing/TimeFights/analysis")
+setwd("~/Documents/Scripts/TimecourseAnalysis/")
 
-countdata_1 <- read.delim("all_quant.sf", header=TRUE, row.names="Name") #read in the file of the count data and call it countdata, row.names tells the name in the top left cell, the gene names
+countdata_1 <- read.delim("all_quant_.sf", header=TRUE, row.names="Name") #read in the file of the count data and call it countdata, row.names tells the name in the top left cell, the gene names
 
 countdata_1 <- round(countdata_1)
 
@@ -31,7 +32,9 @@ countdata <- round(countdata)
 ## Need to sort both so that they are same order
 countdata <- countdata[,order(colnames(countdata))]
 
-coldata <- read.delim("./columnInfo.txt", header=TRUE, row.names=1) #use all_v3 for all data
+#coldata <- read.delim("./columnInfo.txt", header=TRUE, row.names=1) #use all_v3 for all data
+coldata <- read.delim("./columnInfo.tsv", header=TRUE, row.names=1) #use tsv to drop A0
+
 coldata <- coldata[order(rownames(coldata)),]
 
 ## optionally drop the first batch to remove batch effect
@@ -47,6 +50,7 @@ win_rows <- coldata$PlannedTreatment == 'win'
 loss_rows <- coldata$PlannedTreatment == 'loss'
 control_rows <- coldata$PlannedTreatment == 'control'
 
+## Skip this if you're not using A0
 t0_controls <- coldata$Time == 'A0' & coldata$PlannedTreatment == 'control'
 ## I actually need to grab the t0 control to use for DE
 win_rows <- as.logical(win_rows + t0_controls)
@@ -66,16 +70,130 @@ control_counts <- countdata[,control_rows]
 
 #ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata, colData=coldata, design = ~ POP*TREATMENT) #use POP*TREATMENT for tp 1 and 2, POP*TREATMENT*TP for all data
 
-ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_, design = ~ Batch + PlannedTreatment + Time) # Batch effects can't be random effect here
-ddsInteractionCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_, design = ~ Batch + PlannedTreatment*Time) # Batch effects can't be random effect here
-
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_full, design = ~ Batch + PlannedTreatment + Time) # Batch effects can't be random effect here
+ddsInteractionCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_full, design = ~ Batch + PlannedTreatment + Time + PlannedTreatment:Time) # Batch effects can't be random effect here
+ddsInteractionCountTable <- estimateSizeFactors(ddsInteractionCountTable)
 
 ddsWinTable <- DESeqDataSetFromMatrix(countData=win_counts, colData=col_win, design = ~ Batch + Time) 
 ddsLossTable <- DESeqDataSetFromMatrix(countData=loss_counts, colData=col_loss, design = ~ Batch + Time) 
 ddsControlTable <- DESeqDataSetFromMatrix(countData=control_counts, colData=col_c, design = ~ Batch + Time) 
 
+## Get WIN-LOSS contrasts for each time point:
+A_rows <- coldata$Time == 'A' | coldata$Time == 'A0'
+B_rows <- coldata$Time == 'B'
+C_rows <- coldata$Time == 'G'
+D_rows <- coldata$Time == 'D'
+E_rows <- coldata$Time == 'E'
+F_rows <- coldata$Time == 'F'
+
+col_A <- coldata[A_rows,]
+col_B <- coldata[B_rows,]
+col_C <- coldata[C_rows,]
+col_D <- coldata[D_rows,]
+col_E <- coldata[E_rows,]
+col_F <- coldata[F_rows,]
+
+A_counts <- countdata[,A_rows]
+B_counts <- countdata[,B_rows]
+C_counts <- countdata[,C_rows]
+D_counts <- countdata[,D_rows]
+E_counts <- countdata[,E_rows]
+F_counts <- countdata[,F_rows]
+
+ddsATable <- DESeqDataSetFromMatrix(countData=A_counts, colData=col_A, design = ~ Batch + PlannedTreatment) 
+ddsBTable <- DESeqDataSetFromMatrix(countData=B_counts, colData=col_B, design = ~ Batch + PlannedTreatment) 
+ddsCTable <- DESeqDataSetFromMatrix(countData=C_counts, colData=col_C, design = ~ Batch + PlannedTreatment) 
+ddsDTable <- DESeqDataSetFromMatrix(countData=D_counts, colData=col_D, design = ~ Batch + PlannedTreatment) 
+ddsETable <- DESeqDataSetFromMatrix(countData=E_counts, colData=col_E, design = ~ Batch + PlannedTreatment) 
+ddsFTable <- DESeqDataSetFromMatrix(countData=F_counts, colData=col_F, design = ~ Batch + PlannedTreatment) 
+
+ddsA <- DESeq(ddsATable)
+ddsB <- DESeq(ddsBTable)
+ddsC <- DESeq(ddsCTable)
+ddsD <- DESeq(ddsDTable)
+ddsE <- DESeq(ddsETable)
+ddsF <- DESeq(ddsFTable)
+
+res_A <- results(ddsA,contrast=c("PlannedTreatment","win","loss"))
+res_B <- results(ddsB,contrast=c("PlannedTreatment","win","loss"))
+res_C <- results(ddsC,contrast=c("PlannedTreatment","win","loss"))
+res_D <- results(ddsD,contrast=c("PlannedTreatment","win","loss"))
+res_E <- results(ddsE,contrast=c("PlannedTreatment","win","loss"))
+res_F <- results(ddsF,contrast=c("PlannedTreatment","win","loss"))
+
+rldA <- rlogTransformation(ddsA)
+rldB <- rlogTransformation(ddsB)
+rldC <- rlogTransformation(ddsC)
+rldD <- rlogTransformation(ddsD)
+rldE <- rlogTransformation(ddsE)
+rldF <- rlogTransformation(ddsF)
+
+normedA <- assay(rldA)
+normedB <- assay(rldB)
+normedC <- assay(rldC)
+normedD <- assay(rldD)
+normedE <- assay(rldE)
+normedF <- assay(rldF)
+
+A_diff <- rowMeans(normedA[,9:12]) - rowMeans(normedA[,1:4])
+B_diff <- rowMeans(normedB[,9:12]) - rowMeans(normedB[,1:4])
+C_diff <- rowMeans(normedC[,9:12]) - rowMeans(normedC[,1:4])
+D_diff <- rowMeans(normedD[,9:12]) - rowMeans(normedD[,1:4])
+E_diff <- rowMeans(normedE[,9:12]) - rowMeans(normedE[,1:4])
+F_diff <- rowMeans(normedF[,9:12]) - rowMeans(normedF[,1:4])
+
+diff_matrix <- matrix(c(A_diff,B_diff,C_diff,D_diff,E_diff,F_diff),ncol = 6)
+mean_diffs <- rowMeans(diff_matrix)
+head(normedF)
+
+A_order <- order(A_diff,decreasing=TRUE)
+F_order <- order(F_diff,decreasing = TRUE)
+mean_order <-order(mean_diffs,decreasing = TRUE)
+
+A_statorder <- order(res_A$padj)
+F_statorder <- order(res_F$padj)
+All_statorder <- order(res$padj)
+
+m_sorted <- diff_matrix[A_order,]
+
+## It works a little different if you're using the stat order
+m_sorted <- head(diff_matrix[A_statorder,],n=100)
+
+#m_sorted <- m_sorted[order(rowMeans(m_sorted),decreasing = TRUE),]
+m_sorted <- m_sorted[order(m_sorted[,1],decreasing = TRUE),]
+
+m_top = head(m_sorted,n=50)
+m_bottom = tail(m_sorted,n=50)
+
+m_extrema = rbind(m_top,m_bottom)
+
+coul <- colorRampPalette(brewer.pal(8, "PiYG"))(25)
+
+#heatmap.2(m_extrema, col=coul)
+heatmap.2(m_extrema,dendrogram = 'none', Rowv = FALSE,Colv = FALSE, col=coul)
+
+
+geneNames <- rownames(countdata)
+A_genes <- head(geneNames[A_statorder],n=100)
+F_genes <- head(geneNames[F_statorder],n=100)
+X_genes <- head(geneNames[All_statorder],n=100)
+
+AF_genes <- intersect(A_genes,F_genes)
+AX_genes <- intersect(A_genes,X_genes)
+FX_genes <- intersect(F_genes,X_genes)
+## " End Here "
+
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
+res_full = results(ddsFull,contrast = c("PlannedTreatment","win","loss"))
+
+ddsInteraction <-DESeq(ddsInteractionCountTable)
+head(ddsInteraction)
+res_int = results(ddsInteraction, tidy=TRUE, )
+rintOrdered <- res_int[order(res_int$padj),]
+head(rintOrdered)
+sum(res_int$padj<0.05, na.rm=TRUE)
+
 
 ddsWin <- DESeq(ddsWinTable)
 ddsLoss <- DESeq(ddsLossTable)
@@ -92,7 +210,7 @@ res
 resOrdered <- res[order(res$padj),]
 head(resOrdered)
 sum(res$padj<0.05, na.rm=TRUE)
-
+sum(res$pvalue<0.05,na.rm=TRUE)
 
 
 ddsSelect <- ddsWin
