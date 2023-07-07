@@ -1,4 +1,4 @@
-Index,SampleName,Organism,TissueType,Concentration,Volume,Nanodrop280,Nanodrop230,RIN,Group,Number,Treatment,Time,Batch
+Index,SampleName,Organism,TissueType,Concentration,Volume,Nanodrop280,Nanodrop230,Group,Number,Treatment,Time,Batch
 1,BWA129,molly,Brain,163.1,15,2.06,1.62,WA,129,W,A,1
 2,BWB110,molly,Brain,125.8,15,2.05,1.37,WB,110,W,B,1
 3,BLG109,molly,Brain,119,15,2.05,0.82,LG,109,L,G,1
