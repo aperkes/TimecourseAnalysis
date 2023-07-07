@@ -1,105 +1,105 @@
-ID	PlannedTreatment	Experience	Batch	Time
-BWF101	win	win	1	F
-BLD103	loss	loss	1	D
-BWG106	win	win	1	G
-BLE107	loss	draw	1	E
-BWB110	win	win	1	B
-BLA112	loss	loss	1	A
-BLF115	loss	draw	1	F
-BWE119	win	draw	1	E
-BLD120	loss	loss	1	D
-BWG122	win	draw	1	G
-BLB123	loss	draw	1	B
-BWA129	win	draw	1	A
-BLF136	loss	loss	1	F
-BWE137	win	draw	1	E
-BLG138	loss	draw	1	G
-BWA140	win	draw	1	A
-BLB166	loss	loss	1	B
-BWD151	win	draw	1	D
-BWF156	win	draw	1	F
-BLE104	loss	upset	1	E
-BWD105	win	win	1	D
-BLG109	loss	loss	1	G
-BWB165	win	draw	1	B
-BLA164	loss	draw	1	A
-BWF202	win	win	2	F
-BLE206	loss	unknown	2	E
-BWD210	win	unknown	2	D
-BLG213	loss	unknown	2	G
-BWB214	win	unknown	2	B
-BLA215	loss	unknown	2	A
-BLF223	loss	unknown	2	F
-BWE224	win	unknown	2	E
-BLD260	loss	unknown	2	D
-BWG226	win	unknown	2	G
-BLB227	loss	unknown	2	B
-BWA228	win	unknown	2	A
-BLF233	loss	upset	2	F
-BWE235	win	unknown	2	E
-BLD237	loss	unknown	2	D
-BWG238	win	unknown	2	G
-BLB240	loss	unknown	2	B
-BWA242	win	unknown	2	A
-BWF247	win	draw	2	F
-BLE248	loss	unknown	2	E
-BWD250	win	unknown	2	D
-BLG251	loss	unknown	2	G
-BWB252	win	unknown	2	B
-BLA253	loss	unknown	2	A
-BLF382	loss	draw	3	F
-BWE303	win	unknown	3	E
-BLD304	loss	unknown	3	D
-BWG305	win	unknown	3	G
-BLB306	loss	unknown	3	B
-BWA307	win	unknown	3	A
-BWF316	win	unknown	3	F
-BLE317	loss	unknown	3	E
-BWD318	win	unknown	3	D
-BLG319	loss	unknown	3	G
-BWB383	win	unknown	3	B
-BLA322	loss	unknown	3	A
-BWG386	win	unknown	3	G
-BWF327	win	unknown	3	F
-BLE384	loss	unknown	3	E
-BWD329	win	unknown	3	D
-BLG330	loss	unknown	3	G
-BWB331	win	unknown	3	B
-BLA332	loss	unknown	3	A
-BLF338	loss	unknown	3	F
-BWE340	win	unknown	3	E
-BLB351	loss	unknown	3	B
-BLD374	loss	unknown	3	D
-BWA377	win	unknown	3	A
-BSA114	control	control	1	A
-BSA232	control	control	2	A
-BSA246	control	control	2	A
-BSA326	control	control	3	A
-BSA385	control	control	3	A
-BSB219	control	control	2	B
-BSB259	control	control	2	B
-BSB313	control	control	3	B
-BSB381	control	control	3	B
-BSD113	control	control	1	D
-BSD169	control	control	1	D
-BSD218	control	control	2	D
-BSD258	control	control	2	D
-BSD312	control	control	3	D
-BSG334	control	control	3	G
-BSD379	control	control	3	D
-BSE133	control	control	1	E
-BSE167	control	control	1	E
-BSE229	control	control	2	E
-BSE244	control	control	2	E
-BSE323	control	control	3	E
-BSE333	control	control	3	E
-BSF135	control	control	1	F
-BSF168	control	control	1	F
-BSF217	control	control	2	F
-BSF255	control	control	2	F
-BSF311	control	control	3	F
-BSF378	control	control	3	F
-BSG134	control	control	1	G
-BSG231	control	control	2	G
-BSG245	control	control	2	G
-BSG324	control	control	3	G
+ID	PlannedTreatment	Experience	Batch	Time	ShuffledTreatment
+BWF101	win	win	1	F	loss
+BLD103	loss	loss	1	D	loss
+BWG106	win	win	1	G	loss
+BLE107	loss	draw	1	E	control
+BWB110	win	win	1	B	control
+BLA112	loss	loss	1	A	loss
+BLF115	loss	draw	1	F	control
+BWE119	win	draw	1	E	loss
+BLD120	loss	loss	1	D	loss
+BWG122	win	draw	1	G	win
+BLB123	loss	draw	1	B	win
+BWA129	win	draw	1	A	loss
+BLF136	loss	loss	1	F	control
+BWE137	win	draw	1	E	win
+BLG138	loss	draw	1	G	win
+BWA140	win	draw	1	A	win
+BLB166	loss	loss	1	B	loss
+BWD151	win	draw	1	D	loss
+BWF156	win	draw	1	F	win
+BLE104	loss	upset	1	E	loss
+BWD105	win	win	1	D	control
+BLG109	loss	loss	1	G	control
+BWB165	win	draw	1	B	win
+BLA164	loss	draw	1	A	loss
+BWF202	win	win	2	F	control
+BLE206	loss	unknown	2	E	control
+BWD210	win	unknown	2	D	win
+BLG213	loss	unknown	2	G	control
+BWB214	win	unknown	2	B	loss
+BLA215	loss	unknown	2	A	win
+BLF223	loss	unknown	2	F	control
+BWE224	win	unknown	2	E	loss
+BLD260	loss	unknown	2	D	win
+BWG226	win	unknown	2	G	win
+BLB227	loss	unknown	2	B	win
+BWA228	win	unknown	2	A	win
+BLF233	loss	upset	2	F	loss
+BWE235	win	unknown	2	E	control
+BLD237	loss	unknown	2	D	win
+BWG238	win	unknown	2	G	win
+BLB240	loss	unknown	2	B	win
+BWA242	win	unknown	2	A	win
+BWF247	win	draw	2	F	control
+BLE248	loss	unknown	2	E	control
+BWD250	win	unknown	2	D	win
+BLG251	loss	unknown	2	G	loss
+BWB252	win	unknown	2	B	control
+BLA253	loss	unknown	2	A	win
+BLF382	loss	draw	3	F	loss
+BWE303	win	unknown	3	E	loss
+BLD304	loss	unknown	3	D	win
+BWG305	win	unknown	3	G	win
+BLB306	loss	unknown	3	B	control
+BWA307	win	unknown	3	A	control
+BWF316	win	unknown	3	F	loss
+BLE317	loss	unknown	3	E	control
+BWD318	win	unknown	3	D	control
+BLG319	loss	unknown	3	G	control
+BWB383	win	unknown	3	B	control
+BLA322	loss	unknown	3	A	loss
+BWG386	win	unknown	3	G	loss
+BWF327	win	unknown	3	F	win
+BLE384	loss	unknown	3	E	control
+BWD329	win	unknown	3	D	control
+BLG330	loss	unknown	3	G	control
+BWB331	win	unknown	3	B	loss
+BLA332	loss	unknown	3	A	loss
+BLF338	loss	unknown	3	F	win
+BWE340	win	unknown	3	E	win
+BLB351	loss	unknown	3	B	control
+BLD374	loss	unknown	3	D	win
+BWA377	win	unknown	3	A	win
+BSA114	control	control	1	A	control
+BSA232	control	control	2	A	loss
+BSA246	control	control	2	A	loss
+BSA326	control	control	3	A	loss
+BSA385	control	control	3	A	loss
+BSB219	control	control	2	B	loss
+BSB259	control	control	2	B	win
+BSB313	control	control	3	B	loss
+BSB381	control	control	3	B	control
+BSD113	control	control	1	D	loss
+BSD169	control	control	1	D	control
+BSD218	control	control	2	D	win
+BSD258	control	control	2	D	loss
+BSD312	control	control	3	D	win
+BSG334	control	control	3	G	win
+BSD379	control	control	3	D	win
+BSE133	control	control	1	E	control
+BSE167	control	control	1	E	control
+BSE229	control	control	2	E	loss
+BSE244	control	control	2	E	win
+BSE323	control	control	3	E	loss
+BSE333	control	control	3	E	loss
+BSF135	control	control	1	F	win
+BSF168	control	control	1	F	loss
+BSF217	control	control	2	F	win
+BSF255	control	control	2	F	control
+BSF311	control	control	3	F	control
+BSF378	control	control	3	F	control
+BSG134	control	control	1	G	win
+BSG231	control	control	2	G	loss
+BSG245	control	control	2	G	loss
+BSG324	control	control	3	G	win
