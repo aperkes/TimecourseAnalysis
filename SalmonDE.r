@@ -29,7 +29,7 @@ txi <- tximport(files,type= "salmon",txOut = TRUE)
 
 ddsTxi <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
 dds <- DESeq(ddsTxi)
-res <- results(dds,contrast = c("Treatment","W","L")
+res <- results(dds,contrast = c("Treatment","W","L"))
 
 head(res)
 resOrdered <- res[order(res$padj),]
