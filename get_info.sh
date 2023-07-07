@@ -1,7 +1,7 @@
 #! /bin/bash
 
-infile="AF_genes.csv"
-outfile="AF_gene_info.txt"
+infile=$1
+outfile="$1.info"
 
 echo "Gene info" > $outfile
 
