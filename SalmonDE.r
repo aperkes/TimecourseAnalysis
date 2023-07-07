@@ -13,7 +13,7 @@
 library('DESeq2')
 library('tximport')
 
-samples <- read.table('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
+samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
 rownames(samples) <- samples$SampleName
 head(samples[,c("Treatment",'Time','Batch')])
 
