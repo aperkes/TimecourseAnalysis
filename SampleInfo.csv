@@ -1,105 +1,105 @@
 Index,SampleName,Organism,TissueType,Concentration,Volume,Nanodrop280,Nanodrop230,RIN,Group,Number,Treatment,Time,Batch
-1,BWA129,"Amazon molly, Poecilia formoa",Brain,163.1,15,2.06,1.62,,WA,129,W,A,1
-2,BWB110,"Amazon molly, Poecilia formoa",Brain,125.8,15,2.05,1.37,,WB,110,W,B,1
-3,BLG109,"Amazon molly, Poecilia formoa",Brain,119,15,2.05,0.82,,LG,109,L,G,1
-4,BLD120,"Amazon molly, Poecilia formoa",Brain,132.6,15,1.98,0.35,,LD,120,L,D,1
-5,BSE133,"Amazon molly, Poecilia formoa",Brain,127.6,15,2.08,0.29,,SE,133,S,E,1
-6,BSF168,"Amazon molly, Poecilia formoa",Brain,132.8,15,2.02,0.57,,SF,168,S,F,1
-7,BWG122,"Amazon molly, Poecilia formoa",Brain,147,15,1.92,0.55,,WG,122,W,G,1
-8,BLD103,"Amazon molly, Poecilia formoa",Brain,110.6,15,2.06,0.7,,LD,103,L,D,1
-9,BLE104,"Amazon molly, Poecilia formoa",Brain,79.8,15,2.05,0.71,,LE,104,L,E,1
-10,BSF135,"Amazon molly, Poecilia formoa",Brain,121,15,2.03,0.51,,SF,135,S,F,1
-11,BWB165,"Amazon molly, Poecilia formoa",Brain,81.1,15,2.04,0.52,,WB,165,W,B,1
-12,BLE107,"Amazon molly, Poecilia formoa",Brain,91.4,15,2.05,0.54,,LE,107,L,E,1
-13,BFF136,"Amazon molly, Poecilia formoa",Brain,82,15,2.06,1.75,,FF,136,L,F,1
-14,BSA114,"Amazon molly, Poecilia formoa",Brain,80.8,15,1.98,1.07,,SA,114,S,A,1
-15,BWG106,"Amazon molly, Poecilia formoa",Brain,102.2,15,1.94,0.47,,WG,106,W,G,1
-16,BWD151,"Amazon molly, Poecilia formoa",Brain,46.1,15,2.04,1.49,,WD,151,W,D,1
-17,BSG134,"Amazon molly, Poecilia formoa",Brain,91.2,15,1.83,0.43,,SG,134,S,G,1
-18,BSD169,"Amazon molly, Poecilia formoa",Brain,88.9,15,2.03,0.67,,SD,169,S,D,1
-19,BWE137,"Amazon molly, Poecilia formoa",Brain,80.5,15,2.04,0.74,,WE,137,W,E,1
-20,BWF101,"Amazon molly, Poecilia formoa",Brain,127.6,15,2.05,0.59,,WF,101,W,F,1
-21,BLA112,"Amazon molly, Poecilia formoa",Brain,137.4,15,2.09,1.13,,LA,112,L,A,1
-22,BLB123,"Amazon molly, Poecilia formoa",Brain,85.8,15,2.06,0.91,,LB,123,L,B,1
-23,BLA164,"Amazon molly, Poecilia formoa",Brain,69.2,15,2.03,1.99,,LA,164,L,A,1
-24,BWD105,"Amazon molly, Poecilia formoa",Brain,97.8,15,1.96,0.54,,WD,105,W,D,1
-25,BWE119,"Amazon molly, Poecilia formoa",Brain,105.7,15,2.04,1.68,,WE,119,W,E,1
-26,BLF115,"Amazon molly, Poecilia formoa",Brain,129,15,2.07,1.86,,LF,115,L,F,1
-27,BSE167,"Amazon molly, Poecilia formoa",Brain,126.2,15,2.06,1.57,,SE,167,S,E,1
-28,BWF156,"Amazon molly, Poecilia formoa",Brain,140.6,15,2.08,1.81,,WF,156,W,F,1
-29,BWA140,"Amazon molly, Poecilia formoa",Brain,55.3,15,2.02,1,,WA,140,W,A,1
-30,BLB166,"Amazon molly, Poecilia formoa",Brain,120.1,15,2.08,2.17,,LB,166,L,B,1
-31,BLG138,"Amazon molly, Poecilia formoa",Brain,97.5,15,2.07,1.05,,LG,138,L,G,1
-32,BSD113,"Amazon molly, Poecilia formoa",Brain,206,15,2.1,1.68,,SD,113,S,D,1
-33,BWA228,"Amazon molly, Poecilia formoa",Brain,87.1,15,2.05,0.85,,WA,228,W,A,2
-34,BLB227,"Amazon molly, Poecilia formoa",Brain,59.1,15,2.02,1.54,,LB,227,L,B,2
-35,BSG231,"Amazon molly, Poecilia formoa",Brain,44.8,15,2.04,0.51,,SG,231,S,G,2
-36,BWD318,"Amazon molly, Poecilia formoa",Brain,50.6,15,1.96,0.71,,WD,318,W,D,3
-37,BLE317,"Amazon molly, Poecilia formoa",Brain,44.1,15,1.99,0.31,,LE,317,L,E,3
-38,BSF378,"Amazon molly, Poecilia formoa",Brain,54.5,15,2,1.09,,SF,378,S,F,3
-39,BWB214,"Amazon molly, Poecilia formoa",Brain,153,15,1.97,0.63,,WB,214,W,B,2
-40,BLG213,"Amazon molly, Poecilia formoa",Brain,147,15,2.04,1.41,,LG,213,L,G,2
-41,BSD218,"Amazon molly, Poecilia formoa",Brain,116.6,15,2.02,0.83,,SD,218,S,D,2
-42,BWE303,"Amazon molly, Poecilia formoa",Brain,158.2,15,2.05,0.67,,WE,303,W,E,3
-43,BLF382,"Amazon molly, Poecilia formoa",Brain,187.9,15,2.01,1.65,,LF,382,L,F,3
-44,BSA385,"Amazon molly, Poecilia formoa",Brain,202.1,15,2.03,1.17,,SA,385,S,A,3
-45,BWB252,"Amazon molly, Poecilia formoa",Brain,60.9,15,2.03,1.62,,WB,252,W,B,2
-46,BLG251,"Amazon molly, Poecilia formoa",Brain,78.5,15,2.05,2.13,,LG,251,L,G,2
-47,BSD258,"Amazon molly, Poecilia formoa",Brain,84.1,15,2.06,1.68,,SD,258,S,D,2
-48,BWE340,"Amazon molly, Poecilia formoa",Brain,72.1,15,2.05,1.94,,WE,340,W,E,3
-49,BLF338,"Amazon molly, Poecilia formoa",Brain,70.3,15,2.05,2.12,,LF,338,L,F,3
-50,BSA326,"Amazon molly, Poecilia formoa",Brain,62.2,15,2.05,1.91,,SA,326,S,A,3
-51,BWG238,"Amazon molly, Poecilia formoa",Brain,126.6,15,2.07,1.81,,WG,238,W,G,2
-52,BLD237,"Amazon molly, Poecilia formoa",Brain,79.6,15,2.03,1.96,,LD,237,L,D,2
-53,BSE244,"Amazon molly, Poecilia formoa",Brain,92.6,15,2.03,1.93,,SE,244,S,E,2
-54,BWF327,"Amazon molly, Poecilia formoa",Brain,105.5,15,2.06,2.1,,WF,327,W,F,3
-55,BLA332,"Amazon molly, Poecilia formoa",Brain,81.1,15,2.05,2.02,,LA,332,L,A,3
-56,BSB313,"Amazon molly, Poecilia formoa",Brain,118.3,15,2.06,1.87,,SB,313,S,B,3
-57,BWG226,"Amazon molly, Poecilia formoa",Brain,88.9,15,1.92,0.72,,WG,226,W,G,2
-58,BLD260,"Amazon molly, Poecilia formoa",Brain,88.1,15,1.99,0.6,,LD,260,L,D,2
-59,BSE229,"Amazon molly, Poecilia formoa",Brain,74,15,1.99,0.43,,SE,229,S,E,2
-60,BWF316,"Amazon molly, Poecilia formoa",Brain,157.1,15,1.71,0.85,,WF,316,W,F,3
-61,BLA322,"Amazon molly, Poecilia formoa",Brain,74.3,15,1.97,0.21,,LA,322,L,A,3
-62,BSB381,"Amazon molly, Poecilia formoa",Brain,41.9,15,1.99,0.47,,SB,381,S,B,3
-63,BWD210,"Amazon molly, Poecilia formoa",Brain,93.6,15,2.09,1.71,,WD,210,W,D,2
-64,BLE206,"Amazon molly, Poecilia formoa",Brain,44,15,2.06,1.95,,LE,206,L,E,2
-65,BSF217,"Amazon molly, Poecilia formoa",Brain,84.3,15,2.09,20.5,,SF,217,S,F,2
-66,BWA307,"Amazon molly, Poecilia formoa",Brain,52.4,15,2.1,1.72,,WA,307,W,A,3
-67,BLG306,"Amazon molly, Poecilia formoa",Brain,86.7,15,2.01,0.66,,LG,306,L,G,3
-68,BSD334,"Amazon molly, Poecilia formoa",Brain,72.6,15,2.09,1.98,,SD,334,S,G,3
-69,BWD250,"Amazon molly, Poecilia formoa",Brain,56.1,15,2.04,0.35,,WD,250,W,D,2
-70,BLE248,"Amazon molly, Poecilia formoa",Brain,78.5,15,2.05,1.77,,LE,248,L,E,2
-71,BSF255,"Amazon molly, Poecilia formoa",Brain,70.2,15,2.06,2.04,,SF,255,S,F,2
-72,BWA377,"Amazon molly, Poecilia formoa",Brain,78.6,15,2.07,1.4,,WA,377,W,A,3
-73,BLB351,"Amazon molly, Poecilia formoa",Brain,49.1,15,2.05,2,,LB,351,L,B,3
-74,BSG324,"Amazon molly, Poecilia formoa",Brain,64.5,15,2.06,1.15,,SG,324,S,G,3
-75,BWE235,"Amazon molly, Poecilia formoa",Brain,66,15,2.02,1.94,,WE,235,W,E,2
-76,BLF233,"Amazon molly, Poecilia formoa",Brain,64.7,15,2.03,2.05,,LF,233,L,F,2
-77,BSA246,"Amazon molly, Poecilia formoa",Brain,54.4,15,1.97,0.5,,SA,246,S,A,2
-78,BWB331,"Amazon molly, Poecilia formoa",Brain,61.1,15,1.93,0.45,,WB,331,W,B,3
-79,BLG330,"Amazon molly, Poecilia formoa",Brain,65.2,15,2.02,2.09,,LG,330,L,G,3
-80,BSD312,"Amazon molly, Poecilia formoa",Brain,48.7,15,2.01,1.9,,SD,312,S,D,3
-81,BWE224,"Amazon molly, Poecilia formoa",Brain,56.5,15,2.03,2.09,,WE,224,W,E,2
-82,BLF223,"Amazon molly, Poecilia formoa",Brain,33.8,15,1.93,0.84,,LF,223,L,F,2
-83,BSA232,"Amazon molly, Poecilia formoa",Brain,69.8,15,1.99,0.41,,SA,232,S,A,2
-84,BWB383,"Amazon molly, Poecilia formoa",Brain,48.3,15,2.02,1.79,,WB,383,W,B,3
-85,BLG319,"Amazon molly, Poecilia formoa",Brain,51.4,15,1.93,0.41,,LG,319,L,G,3
-86,BSD379,"Amazon molly, Poecilia formoa",Brain,60.3,15,1.89,0.47,,SD,379,S,D,3
-87,BWF202,"Amazon molly, Poecilia formoa",Brain,65.4,15,2.07,20.9,,WF,202,W,F,2
-88,BLA215,"Amazon molly, Poecilia formoa",Brain,52.8,15,2.04,1.89,,LA,215,L,A,2
-89,BSB259,"Amazon molly, Poecilia formoa",Brain,42.4,15,1.96,1.96,,SB,259,S,B,2
-90,BWG305,"Amazon molly, Poecilia formoa",Brain,58.6,15,2.05,1.67,,WG,305,W,G,3
-91,BLD304,"Amazon molly, Poecilia formoa",Brain,44.6,15,2.02,1.63,,LD,304,L,D,3
-92,BSE323,"Amazon molly, Poecilia formoa",Brain,36.7,15,2.06,1.94,,SE,323,S,E,3
-93,BWF247,"Amazon molly, Poecilia formoa",Brain,58.1,15,2.02,1.13,,WF,247,W,F,2
-94,BLA253,"Amazon molly, Poecilia formoa",Brain,55.9,15,2.05,2.08,,LA,253,L,A,2
-95,BSB219,"Amazon molly, Poecilia formoa",Brain,52.3,15,2.08,0.97,,SB,219,S,B,2
-96,BWG386,"Amazon molly, Poecilia formoa",Brain,69,15,2.05,1.27,,WG,386,W,G,3
-97,BLD374,"Amazon molly, Poecilia formoa",Brain,73.2,15,2.06,0.89,,LD,374,L,D,3
-98,BSE333,"Amazon molly, Poecilia formoa",Brain,75.1,15,2.03,0.6,,SE,333,S,E,3
-99,BWA242,"Amazon molly, Poecilia formoa",Brain,47.9,15,2.03,2,,WA,242,W,A,2
-100,BLB240,"Amazon molly, Poecilia formoa",Brain,66.5,15,2.05,2.17,,LB,240,L,B,2
-101,BSG245,"Amazon molly, Poecilia formoa",Brain,69.1,15,2.07,2.05,,SG,245,S,G,2
-102,BWD329,"Amazon molly, Poecilia formoa",Brain,52.8,15,2.04,2.11,,WD,329,W,D,3
-103,BLE384,"Amazon molly, Poecilia formoa",Brain,61.2,15,2.02,2.15,,LE,384,L,E,3
-104,BSF311,"Amazon molly, Poecilia formoa",Brain,57.8,15,2.04,0.74,,SF,311,S,F,3
+1,BWA129,molly,Brain,163.1,15,2.06,1.62,WA,129,W,A,1
+2,BWB110,molly,Brain,125.8,15,2.05,1.37,WB,110,W,B,1
+3,BLG109,molly,Brain,119,15,2.05,0.82,LG,109,L,G,1
+4,BLD120,molly,Brain,132.6,15,1.98,0.35,LD,120,L,D,1
+5,BSE133,molly,Brain,127.6,15,2.08,0.29,SE,133,S,E,1
+6,BSF168,molly,Brain,132.8,15,2.02,0.57,SF,168,S,F,1
+7,BWG122,molly,Brain,147,15,1.92,0.55,WG,122,W,G,1
+8,BLD103,molly,Brain,110.6,15,2.06,0.7,LD,103,L,D,1
+9,BLE104,molly,Brain,79.8,15,2.05,0.71,LE,104,L,E,1
+10,BSF135,molly,Brain,121,15,2.03,0.51,SF,135,S,F,1
+11,BWB165,molly,Brain,81.1,15,2.04,0.52,WB,165,W,B,1
+12,BLE107,molly,Brain,91.4,15,2.05,0.54,LE,107,L,E,1
+13,BFF136,molly,Brain,82,15,2.06,1.75,FF,136,L,F,1
+14,BSA114,molly,Brain,80.8,15,1.98,1.07,SA,114,S,A,1
+15,BWG106,molly,Brain,102.2,15,1.94,0.47,WG,106,W,G,1
+16,BWD151,molly,Brain,46.1,15,2.04,1.49,WD,151,W,D,1
+17,BSG134,molly,Brain,91.2,15,1.83,0.43,SG,134,S,G,1
+18,BSD169,molly,Brain,88.9,15,2.03,0.67,SD,169,S,D,1
+19,BWE137,molly,Brain,80.5,15,2.04,0.74,WE,137,W,E,1
+20,BWF101,molly,Brain,127.6,15,2.05,0.59,WF,101,W,F,1
+21,BLA112,molly,Brain,137.4,15,2.09,1.13,LA,112,L,A,1
+22,BLB123,molly,Brain,85.8,15,2.06,0.91,LB,123,L,B,1
+23,BLA164,molly,Brain,69.2,15,2.03,1.99,LA,164,L,A,1
+24,BWD105,molly,Brain,97.8,15,1.96,0.54,WD,105,W,D,1
+25,BWE119,molly,Brain,105.7,15,2.04,1.68,WE,119,W,E,1
+26,BLF115,molly,Brain,129,15,2.07,1.86,LF,115,L,F,1
+27,BSE167,molly,Brain,126.2,15,2.06,1.57,SE,167,S,E,1
+28,BWF156,molly,Brain,140.6,15,2.08,1.81,WF,156,W,F,1
+29,BWA140,molly,Brain,55.3,15,2.02,1,WA,140,W,A,1
+30,BLB166,molly,Brain,120.1,15,2.08,2.17,LB,166,L,B,1
+31,BLG138,molly,Brain,97.5,15,2.07,1.05,LG,138,L,G,1
+32,BSD113,molly,Brain,206,15,2.1,1.68,SD,113,S,D,1
+33,BWA228,molly,Brain,87.1,15,2.05,0.85,WA,228,W,A,2
+34,BLB227,molly,Brain,59.1,15,2.02,1.54,LB,227,L,B,2
+35,BSG231,molly,Brain,44.8,15,2.04,0.51,SG,231,S,G,2
+36,BWD318,molly,Brain,50.6,15,1.96,0.71,WD,318,W,D,3
+37,BLE317,molly,Brain,44.1,15,1.99,0.31,LE,317,L,E,3
+38,BSF378,molly,Brain,54.5,15,2,1.09,SF,378,S,F,3
+39,BWB214,molly,Brain,153,15,1.97,0.63,WB,214,W,B,2
+40,BLG213,molly,Brain,147,15,2.04,1.41,LG,213,L,G,2
+41,BSD218,molly,Brain,116.6,15,2.02,0.83,SD,218,S,D,2
+42,BWE303,molly,Brain,158.2,15,2.05,0.67,WE,303,W,E,3
+43,BLF382,molly,Brain,187.9,15,2.01,1.65,LF,382,L,F,3
+44,BSA385,molly,Brain,202.1,15,2.03,1.17,SA,385,S,A,3
+45,BWB252,molly,Brain,60.9,15,2.03,1.62,WB,252,W,B,2
+46,BLG251,molly,Brain,78.5,15,2.05,2.13,LG,251,L,G,2
+47,BSD258,molly,Brain,84.1,15,2.06,1.68,SD,258,S,D,2
+48,BWE340,molly,Brain,72.1,15,2.05,1.94,WE,340,W,E,3
+49,BLF338,molly,Brain,70.3,15,2.05,2.12,LF,338,L,F,3
+50,BSA326,molly,Brain,62.2,15,2.05,1.91,SA,326,S,A,3
+51,BWG238,molly,Brain,126.6,15,2.07,1.81,WG,238,W,G,2
+52,BLD237,molly,Brain,79.6,15,2.03,1.96,LD,237,L,D,2
+53,BSE244,molly,Brain,92.6,15,2.03,1.93,SE,244,S,E,2
+54,BWF327,molly,Brain,105.5,15,2.06,2.1,WF,327,W,F,3
+55,BLA332,molly,Brain,81.1,15,2.05,2.02,LA,332,L,A,3
+56,BSB313,molly,Brain,118.3,15,2.06,1.87,SB,313,S,B,3
+57,BWG226,molly,Brain,88.9,15,1.92,0.72,WG,226,W,G,2
+58,BLD260,molly,Brain,88.1,15,1.99,0.6,LD,260,L,D,2
+59,BSE229,molly,Brain,74,15,1.99,0.43,SE,229,S,E,2
+60,BWF316,molly,Brain,157.1,15,1.71,0.85,WF,316,W,F,3
+61,BLA322,molly,Brain,74.3,15,1.97,0.21,LA,322,L,A,3
+62,BSB381,molly,Brain,41.9,15,1.99,0.47,SB,381,S,B,3
+63,BWD210,molly,Brain,93.6,15,2.09,1.71,WD,210,W,D,2
+64,BLE206,molly,Brain,44,15,2.06,1.95,LE,206,L,E,2
+65,BSF217,molly,Brain,84.3,15,2.09,20.5,SF,217,S,F,2
+66,BWA307,molly,Brain,52.4,15,2.1,1.72,WA,307,W,A,3
+67,BLG306,molly,Brain,86.7,15,2.01,0.66,LG,306,L,G,3
+68,BSD334,molly,Brain,72.6,15,2.09,1.98,SD,334,S,G,3
+69,BWD250,molly,Brain,56.1,15,2.04,0.35,WD,250,W,D,2
+70,BLE248,molly,Brain,78.5,15,2.05,1.77,LE,248,L,E,2
+71,BSF255,molly,Brain,70.2,15,2.06,2.04,SF,255,S,F,2
+72,BWA377,molly,Brain,78.6,15,2.07,1.4,WA,377,W,A,3
+73,BLB351,molly,Brain,49.1,15,2.05,2,LB,351,L,B,3
+74,BSG324,molly,Brain,64.5,15,2.06,1.15,SG,324,S,G,3
+75,BWE235,molly,Brain,66,15,2.02,1.94,WE,235,W,E,2
+76,BLF233,molly,Brain,64.7,15,2.03,2.05,LF,233,L,F,2
+77,BSA246,molly,Brain,54.4,15,1.97,0.5,SA,246,S,A,2
+78,BWB331,molly,Brain,61.1,15,1.93,0.45,WB,331,W,B,3
+79,BLG330,molly,Brain,65.2,15,2.02,2.09,LG,330,L,G,3
+80,BSD312,molly,Brain,48.7,15,2.01,1.9,SD,312,S,D,3
+81,BWE224,molly,Brain,56.5,15,2.03,2.09,WE,224,W,E,2
+82,BLF223,molly,Brain,33.8,15,1.93,0.84,LF,223,L,F,2
+83,BSA232,molly,Brain,69.8,15,1.99,0.41,SA,232,S,A,2
+84,BWB383,molly,Brain,48.3,15,2.02,1.79,WB,383,W,B,3
+85,BLG319,molly,Brain,51.4,15,1.93,0.41,LG,319,L,G,3
+86,BSD379,molly,Brain,60.3,15,1.89,0.47,SD,379,S,D,3
+87,BWF202,molly,Brain,65.4,15,2.07,20.9,WF,202,W,F,2
+88,BLA215,molly,Brain,52.8,15,2.04,1.89,LA,215,L,A,2
+89,BSB259,molly,Brain,42.4,15,1.96,1.96,SB,259,S,B,2
+90,BWG305,molly,Brain,58.6,15,2.05,1.67,WG,305,W,G,3
+91,BLD304,molly,Brain,44.6,15,2.02,1.63,LD,304,L,D,3
+92,BSE323,molly,Brain,36.7,15,2.06,1.94,SE,323,S,E,3
+93,BWF247,molly,Brain,58.1,15,2.02,1.13,WF,247,W,F,2
+94,BLA253,molly,Brain,55.9,15,2.05,2.08,LA,253,L,A,2
+95,BSB219,molly,Brain,52.3,15,2.08,0.97,SB,219,S,B,2
+96,BWG386,molly,Brain,69,15,2.05,1.27,WG,386,W,G,3
+97,BLD374,molly,Brain,73.2,15,2.06,0.89,LD,374,L,D,3
+98,BSE333,molly,Brain,75.1,15,2.03,0.6,SE,333,S,E,3
+99,BWA242,molly,Brain,47.9,15,2.03,2,WA,242,W,A,2
+100,BLB240,molly,Brain,66.5,15,2.05,2.17,LB,240,L,B,2
+101,BSG245,molly,Brain,69.1,15,2.07,2.05,SG,245,S,G,2
+102,BWD329,molly,Brain,52.8,15,2.04,2.11,WD,329,W,D,3
+103,BLE384,molly,Brain,61.2,15,2.02,2.15,LE,384,L,E,3
+104,BSF311,molly,Brain,57.8,15,2.04,0.74,SF,311,S,F,3
