@@ -13,6 +13,9 @@
 library('DESeq2')
 library('tximport')
 library('jsonlite')
+#library('ggplot2')
+library('RColorBrewer')
+library('gplots')
 
 samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
 rownames(samples) <- samples$SampleName
@@ -118,15 +121,80 @@ res_justF <- results(dds_justF,contrast=c("Treatment","W","L"))
 sig_ja <- res_justA[res_justA$padj < 0.05 & !is.na(res_justA$padj),]
 sig_jf <- res_justF[res_justF$padj < 0.05 & !is.na(res_justF$padj),]
 
-shared_genes_i <- res_justA$padj < 0.05 & !res_justF$padj < 0.05 & !is.na(res_justA$padj) & !is.na(res_justF$padj)
+shared_genes_i <- res_justA$padj < 0.05 & res_justF$padj < 0.05 & !is.na(res_justA$padj) & !is.na(res_justF$padj)
+
 
 genes <- rownames(res)
 ## Note the '!'
 unique_Ai <- res_justA$padj < 0.05 & !is.na(res_justA$padj) & !shared_genes
 unique_Fi <- res_justF$padj < 0.05 & !is.na(res_justF$padj) & !shared_genes
 
+res_uniqueA <- res_justA[unique_Ai,]
+res_uniqueF <- res_justF[unique_Fi,]
+res_shared <- res_justA[shared_genes_i,]
+
+
+
 ## Save all these to csv's so I can inspect gene id's
-write.csv(genes[unique_Ai],'unique_A.csv',row.names = FALSE)
-write.csv(genes[unique_Fi],'unique_F.csv',row.names = FALSE)
-write.csv(genes[shared_genes_i],'unique_A.csv',row.names = FALSE)
-write.csv(rownames(res_sig),'all_sig.csv',row.names = FALSE)
+write.csv(rownames(res_uniqueA[order(res_uniqueA$padj),]),
+          'unique_A.csv',row.names = FALSE)
+write.csv(rownames(res_uniqueF[order(res_uniqueF$padj),]),
+          'unique_F.csv',row.names = FALSE)
+write.csv(rownames(res_shared[order(res_shared$padj),]),
+          'shared_AF.csv',row.names = FALSE)
+write.csv(rownames(res_sig[order(res_sig$padj),]),
+          'all_sig.csv',row.names = FALSE)
+
+
+## On to the PCA! 
+library('vegan')
+library('ape')
+
+dds_23 <- dds
+dds_23 <- dds[res$padj < 0.1 & !is.na(res$padj)]
+dds_23 <- dds_23[,dds$Batch != 1]
+#rld <- rlogTransformation(dds) # Not sure whether there are advantages
+
+rld <- vst(dds) # Use if there are many samples (>30), but breaks if <1000
+rld <- varianceStabilizingTransformation((dds_23))
+#rld <- rlogTransformation(dds_23)
+
+# (in the chunk below, replace factor1 and factor2 with your actual factor names from myConditions table)
+#factor1 <- as.character(colData(dds)$PlannedTreatment) 
+factor2 <- as.character(colData(dds_23)$Treatment) 
+factor3 <- as.character(colData(dds_23)$Batch) 
+factor4 <- as.character(colData(dds_23)$Time) 
+
+# actual PCoA analysis
+vsd <- assay(rld)
+dds.pcoa <- pcoa(vegdist(t(vsd),method="manhattan")/1000)
+scores <- dds.pcoa$vectors
+percent <- dds.pcoa$values$Eigenvalues
+weights <- percent / sum(percent) * 100 #percent for each axes
+
+
+#plot PC axis 1 and 2 for all data
+xLab <- paste("PC1 (",round(weights[1],3),"%)")
+yLab <- paste("PC2 (",round(weights[2],3),"%)")
+
+## For batches:
+plot(scores[,1], scores[,2], col=c("blue","red","orange")[as.numeric(as.factor(factor3))], pch=c(17, 4, 16)[as.numeric(as.factor(factor2))], xlab = xLab, ylab = yLab)
+ordispider(scores,factor3, col=c("blue","red","orange"))
+
+## For treatment
+plot(scores[,1], scores[,2], 
+     col=c("blue","grey","gold")[as.numeric(as.factor(factor2))], 
+     pch=c(17, 4, 16)[as.numeric(as.factor(factor2))], 
+     xlim = c(-0.1,0.1),
+     ylim = c(-0.1,0.1),
+     xlab = xLab, ylab = yLab)
+ordispider(scores,factor2, col=c("blue","grey","gold"))
+
+## For time
+plot(scores[,1], scores[,2], 
+     col=c("lightblue","blue","darkblue","gold","orange","red")[as.numeric(as.factor(factor4))], 
+     pch=c(17, 4, 16)[as.numeric(as.factor(factor2))], 
+     #xlim = c(-0.1,0.1),
+     #ylim = c(-0.1,0.1),
+     xlab = xLab, ylab = yLab)
+ordispider(scores,factor4, col=c("lightblue","blue","darkblue","gold","orange","red"))
