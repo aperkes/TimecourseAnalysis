@@ -14,8 +14,7 @@ library('DESeq2')
 library('tximport')
 library('jsonlite')
 #library('ggplot2')
-library('RColorBrewer')
-library('gplots')
+
 
 samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
 rownames(samples) <- samples$SampleName
@@ -33,7 +32,14 @@ head(files)
 #txi <- tximport(files,type= "salmon",tx2gene=tx2gene)
 txi <- tximport(files,type= "salmon",txOut = TRUE)
 
-ddsTxi <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+#keep <- rowSums(cpm(ddsTxi_) > 1) >= 4
+keep <- rowSums(cpm(txi$counts) > 1) >= 4
+
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+#ddsTxi <- ddsTxi_
+ddsTxi <- ddsTxi_[keep,]
+
+
 dds <- DESeq(ddsTxi)
 res <- results(dds,contrast = c("Treatment","W","L"))
 
@@ -89,6 +95,10 @@ diff_matrix <- matrix(c(resA$log2FoldChange,
                         resE$log2FoldChange,
                         resF$log2FoldChange),ncol = 6)
 
+## Import the stuff, note, this might break the above code. 
+library('RColorBrewer')
+library('gplots')
+
 coul <- colorRampPalette(brewer.pal(8, "PiYG"))(25)
 
 #heatmap.2(m_extrema, col=coul)
@@ -126,8 +136,8 @@ shared_genes_i <- res_justA$padj < 0.05 & res_justF$padj < 0.05 & !is.na(res_jus
 
 genes <- rownames(res)
 ## Note the '!'
-unique_Ai <- res_justA$padj < 0.05 & !is.na(res_justA$padj) & !shared_genes
-unique_Fi <- res_justF$padj < 0.05 & !is.na(res_justF$padj) & !shared_genes
+unique_Ai <- res_justA$padj < 0.05 & !is.na(res_justA$padj) & !shared_genes_i
+unique_Fi <- res_justF$padj < 0.05 & !is.na(res_justF$padj) & !shared_genes_i
 
 res_uniqueA <- res_justA[unique_Ai,]
 res_uniqueF <- res_justF[unique_Fi,]
@@ -151,19 +161,23 @@ library('vegan')
 library('ape')
 
 dds_23 <- dds
-dds_23 <- dds[res$padj < 0.1 & !is.na(res$padj)]
+#dds_23 <- dds[res$padj < 0.1 & !is.na(res$padj)]
 dds_23 <- dds_23[,dds$Batch != 1]
 #rld <- rlogTransformation(dds) # Not sure whether there are advantages
 
-rld <- vst(dds) # Use if there are many samples (>30), but breaks if <1000
-rld <- varianceStabilizingTransformation((dds_23))
+dds_ <- dds
+dds_ <- dds_23
+
+rld <- vst(dds_) # Use if there are many samples (>30), but breaks if <1000
+#rld <- varianceStabilizingTransformation((dds_23))
 #rld <- rlogTransformation(dds_23)
+
 
 # (in the chunk below, replace factor1 and factor2 with your actual factor names from myConditions table)
 #factor1 <- as.character(colData(dds)$PlannedTreatment) 
-factor2 <- as.character(colData(dds_23)$Treatment) 
-factor3 <- as.character(colData(dds_23)$Batch) 
-factor4 <- as.character(colData(dds_23)$Time) 
+factor2 <- as.character(colData(dds_)$Treatment) 
+factor3 <- as.character(colData(dds_)$Batch) 
+factor4 <- as.character(colData(dds_)$Time) 
 
 # actual PCoA analysis
 vsd <- assay(rld)
@@ -185,8 +199,8 @@ ordispider(scores,factor3, col=c("blue","red","orange"))
 plot(scores[,1], scores[,2], 
      col=c("blue","grey","gold")[as.numeric(as.factor(factor2))], 
      pch=c(17, 4, 16)[as.numeric(as.factor(factor2))], 
-     xlim = c(-0.1,0.1),
-     ylim = c(-0.1,0.1),
+     #xlim = c(-0.1,0.1),
+     #ylim = c(-0.1,0.1),
      xlab = xLab, ylab = yLab)
 ordispider(scores,factor2, col=c("blue","grey","gold"))
 
