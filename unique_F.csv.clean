@@ -2,19 +2,14 @@ Gene info
 hepatoma-derived growth factor-related protein 3 (LOC103129684), transcript variant X2, mRNA
 CSC1-like protein 2 (LOC103130112), transcript variant X1, mRNA
 BTB/POZ domain-containing protein 3 (LOC103132703), mRNA
-pituitary adenylate cyclase-activating polypeptide type I receptor-like (LOC103135700), transcript variant X2, mRNA
-tankyrase-1-like (LOC103141352), transcript variant X1, mRNA
 glycine-rich cell wall structural protein 1.8-like (LOC103148643), transcript variant X2, mRNA
 sidekick cell adhesion molecule 2 (sdk2), transcript variant X7, mRNA
 disks large-associated protein 2-like (LOC103132202), transcript variant X4, mRNA
 dedicator of cytokinesis 8 (dock8), transcript variant X2, mRNA
 RNA binding protein fox-1 homolog 2-like (LOC103137756), transcript variant X4, mRNA
 ryanodine receptor 1-like (LOC103138257), transcript variant X12, mRNA
-bromodomain containing 8 (brd8), transcript variant X6, mRNA
 PPARG coactivator 1 alpha (ppargc1a), transcript variant X9, mRNA
 microtubule-associated protein 4-like (LOC103146972), transcript variant X5, mRNA
-alanine aminotransferase 2-like (LOC103135722), transcript variant X2, mRNA
-zinc finger protein 652 (znf652), transcript variant X2, mRNA
 myomegalin-like (LOC103148914), transcript variant X11, mRNA
 uncharacterized LOC103146863 (LOC103146863), transcript variant X4, ncRNA
 vacuole membrane protein 1-like (LOC103142090), transcript variant X1, mRNA
@@ -22,9 +17,7 @@ high mobility group 20B (hmg20b), transcript variant X3, mRNA
 netrin G1 (ntng1), transcript variant X7, mRNA
 microtubule-associated protein 4-like (LOC103146972), transcript variant X6, mRNA
 golgi membrane protein 1 (golm1), transcript variant X1, mRNA
-potassium voltage-gated channel subfamily D member 3-like (LOC103135478), transcript variant X1, mRNA
 max-interacting protein 1-like (LOC103148717), transcript variant X2, mRNA
-ubiquitin protein ligase E3 component n-recognin 5 (ubr5), transcript variant X7, mRNA
 transforming acidic coiled-coil containing protein 1 (tacc1), transcript variant X3, mRNA
 cryptochrome-1-like (LOC103148191), transcript variant X1, mRNA
 protein phosphatase 6 regulatory subunit 2 (ppp6r2), transcript variant X4, mRNA
@@ -32,9 +25,10 @@ nucleosome assembly protein 1 like 1 (nap1l1), transcript variant X2, mRNA
 solute carrier family 24 member 2 (slc24a2), transcript variant X5, mRNA
 glutamate ionotropic receptor NMDA type subunit 1 (grin1), transcript variant X10, mRNA
 cullin-3 (LOC103146285), transcript variant X2, mRNA
+alanine aminotransferase 2-like (LOC103135722), transcript variant X2, mRNA
 synaptojanin-1-like (LOC103140345), transcript variant X7, mRNA
-disks large homolog 4-like (LOC103129600), transcript variant X4, mRNA
 solute carrier family 9 member A8 (slc9a8), transcript variant X1, mRNA
+zinc finger protein 652 (znf652), transcript variant X2, mRNA
 sarcoglycan epsilon (sgce), transcript variant X4, mRNA
 YTH domain-containing family protein 1-like (LOC103139080), transcript variant X2, mRNA
 hepatic leukemia factor-like (LOC103147070), transcript variant X1, mRNA
@@ -48,13 +42,9 @@ family with sequence similarity 219 member A (fam219a), transcript variant X1, m
 cyclin Y (ccny), transcript variant X1, mRNA
 calmodulin-binding transcription activator 2-like (LOC103139503), transcript variant X4, mRNA
 protocadherin 19 (pcdh19), transcript variant X7, mRNA
-non-muscle caldesmon-like (LOC103156466), transcript variant X7, mRNA
 pre-B-cell leukemia homeobox 3 (pbx3), transcript variant X2, mRNA
 arf-GAP with coiled-coil, ANK repeat and PH domain-containing protein 3-like (LOC103139499), transcript variant X1, mRNA
-cell adhesion molecule 2-like (LOC103149435), transcript variant X1, mRNA
-RNA-binding protein Musashi homolog 2 (LOC103133943), transcript variant X5, mRNA
 ribosomal protein S16 (rps16), transcript variant X2, mRNA
-cadherin EGF LAG seven-pass G-type receptor 3 (celsr3), transcript variant X2, mRNA
 intermediate filament family orphan 1 (iffo1), transcript variant X6, mRNA
 calmodulin-binding transcription activator 2-like (LOC103139503), transcript variant X1, mRNA
 neurotrophic receptor tyrosine kinase 2 (ntrk2), transcript variant X5, mRNA
@@ -63,7 +53,6 @@ scaffold attachment factor B2 (LOC103156883), transcript variant X1, mRNA
 pleckstrin homology domain-containing family A member 5-like (LOC103150271), transcript variant X12, mRNA
 dynamin 2 (dnm2), transcript variant X5, mRNA
 testis expressed 2 (tex2), transcript variant X3, mRNA
-unc-13 homolog A (C. elegans) (unc13a), transcript variant X6, mRNA
 phosphatidylinositol transfer protein beta isoform-like (LOC103155570), transcript variant X2, mRNA
 glutamate ionotropic receptor kainate type subunit 2 (grik2), transcript variant X1, mRNA
 mannosidase beta like (manbal), transcript variant X1, mRNA
@@ -72,37 +61,22 @@ sperm associated antigen 9 (spag9), transcript variant X8, mRNA
 calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X1, mRNA
 mitochondrial calcium uniporter (mcu), transcript variant X2, mRNA
 eukaryotic translation initiation factor 4 gamma 1-like (LOC103143052), transcript variant X11, mRNA
-serine/threonine-protein kinase WNK2-like (LOC103138089), transcript variant X2, mRNA
+leucine-rich repeat-containing protein 24-like (LOC103130497), transcript variant X5, mRNA
 staufen double-stranded RNA binding protein 1 (stau1), transcript variant X1, mRNA
-lysine-specific demethylase 5C-like (LOC103139054), transcript variant X1, mRNA
 calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X13, mRNA
 LDL receptor related protein 4 (lrp4), transcript variant X2, mRNA
-FAT atypical cadherin 1 (fat1), transcript variant X3, mRNA
 BMS1, ribosome biogenesis factor (bms1), transcript variant X2, mRNA
 cyclin-dependent kinase-like 5 (LOC103143564), transcript variant X6, mRNA
-heterogeneous nuclear ribonucleoprotein K (hnrnpk), transcript variant X1, mRNA
-syntaphilin (snph), transcript variant X3, mRNA
 sperm associated antigen 9 (spag9), transcript variant X6, mRNA
 protein phosphatase 1 regulatory inhibitor subunit 1B (ppp1r1b), transcript variant X1, mRNA
-semaphorin 6D (sema6d), transcript variant X6, mRNA
+disks large homolog 4-like (LOC103129600), transcript variant X4, mRNA
 rabphilin 3A (rph3a), transcript variant X2, mRNA
 protocadherin-17-like (LOC103134390), transcript variant X2, misc_RNA
-sodium channel protein type 8 subunit alpha-like (LOC103147638), transcript variant X2, mRNA
-tumor protein D52 like 2 (tpd52l2), transcript variant X9, mRNA
-LIM domain-binding protein 2 (LOC103137320), transcript variant X1, mRNA
-phosphatidylinositol transfer protein, cytoplasmic 1 (pitpnc1), transcript variant X1, mRNA
 beta-1,3-galactosyltransferase 2-like (LOC103143863), transcript variant X1, mRNA
-serine/arginine repetitive matrix protein 1-like (LOC103153450), transcript variant X3, mRNA
-vesicle-associated membrane protein-associated protein B (LOC103156041), transcript variant X1, mRNA
 CUGBP Elav-like family member 4 (LOC103139573), transcript variant X1, mRNA
-RUN and SH3 domain containing 2 (rusc2), transcript variant X1, mRNA
 CASK interacting protein 1 (caskin1), transcript variant X6, mRNA
-glutamate metabotropic receptor 8 (grm8), transcript variant X7, mRNA
-dishevelled associated activator of morphogenesis 2 (daam2), transcript variant X3, mRNA
-EWS RNA binding protein 1 (ewsr1), transcript variant X2, mRNA
 G-patch domain containing 2 like (gpatch2l), transcript variant X2, mRNA
 LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X9, mRNA
-NMDA receptor synaptonuclear signaling and neuronal migration factor (nsmf), transcript variant X1, mRNA
 mediator complex subunit 22 (med22), transcript variant X3, mRNA
 protein kinase C zeta (prkcz), transcript variant X5, mRNA
 tubulin polymerization promoting protein (tppp), transcript variant X5, mRNA
@@ -110,57 +84,35 @@ uncharacterized protein CXorf57 (LOC103133962), transcript variant X4, mRNA
 G protein-coupled receptor 85 (gpr85), transcript variant X1, mRNA
 RNA-binding Raly-like protein (LOC103146091), transcript variant X4, mRNA
 protein tyrosine phosphatase type IVA 2-like (LOC103154193), transcript variant X2, mRNA
-carnitine O-palmitoyltransferase 1, liver isoform-like (LOC103144435), transcript variant X4, mRNA
-microtubule-associated tumor suppressor candidate 2-like (LOC103140686), transcript variant X2, mRNA
 ubiquitin-associated protein 2-like (LOC103135352), transcript variant X2, mRNA
-dystrobrevin beta (dtnb), transcript variant X4, mRNA
 family with sequence similarity 188 member A (fam188a), transcript variant X1, mRNA
-protein argonaute-4 (LOC103154986), transcript variant X3, mRNA
-SRSF protein kinase 2-like (LOC103134474), transcript variant X4, mRNA
-golgin A2 (golga2), transcript variant X4, mRNA
 SAM and SH3 domain containing 1 (sash1), transcript variant X4, mRNA
 general transcription factor IIE subunit 2 (gtf2e2), transcript variant X1, mRNA
-receptor-type tyrosine-protein phosphatase U (LOC103143151), transcript variant X2, mRNA
-sperm associated antigen 9 (spag9), transcript variant X3, mRNA
 rap1 GTPase-activating protein 2-like (LOC103129740), transcript variant X3, mRNA
 ras and Rab interactor 2-like (LOC103129762), transcript variant X2, mRNA
-nephronectin (npnt), transcript variant X2, mRNA
 aryl hydrocarbon receptor nuclear translocator-like protein 2 (LOC103133689), transcript variant X1, mRNA
 neuron navigator 1-like (LOC103134605), transcript variant X16, mRNA
 60S ribosomal protein L22 (LOC103154231), transcript variant X1, mRNA
-calpastatin (cast), transcript variant X13, mRNA
 solute carrier family 22 member 2-like (LOC103152682), mRNA
 SH3-domain GRB2-like (endophilin) interacting protein 1 (sgip1), transcript variant X12, mRNA
-zinc finger protein 618 (znf618), transcript variant X4, mRNA
-R3H domain containing 2 (r3hdm2), transcript variant X4, mRNA
 zinc finger DHHC-type containing 22 (zdhhc22), mRNA
 RNA binding protein fox-1 homolog 2-like (LOC103143659), transcript variant X1, mRNA
 protein piccolo-like (LOC103133826), transcript variant X7, mRNA
 family with sequence similarity 131 member A (fam131a), transcript variant X3, mRNA
-ankyrin repeat and IBR domain containing 1 (ankib1), transcript variant X6, mRNA
 N(alpha)-acetyltransferase 20, NatB catalytic subunit (naa20), transcript variant X1, mRNA
-pituitary adenylate cyclase-activating polypeptide type I receptor-like (LOC103129767), transcript variant X2, mRNA
 neighbor of BRCA1 gene 1 (nbr1), transcript variant X4, mRNA
-ankyrin repeat and IBR domain containing 1 (ankib1), transcript variant X7, mRNA
 netrin G1 (ntng1), transcript variant X9, mRNA
 ubiquitin protein ligase E3 component n-recognin 4 (ubr4), transcript variant X7, mRNA
+cell adhesion molecule 2-like (LOC103149435), transcript variant X1, mRNA
 calcium voltage-gated channel auxiliary subunit beta 2 (cacnb2), transcript variant X5, mRNA
-synergin, gamma (synrg), transcript variant X6, mRNA
-signal peptide peptidase like 2B (sppl2b), transcript variant X3, mRNA
-aryl hydrocarbon receptor nuclear translocator-like (LOC103136619), transcript variant X11, mRNA
-zinc finger protein 36, C3H1 type-like 2 (LOC103155467), transcript variant X1, mRNA
 midline 1 (mid1), transcript variant X1, mRNA
 transcription factor HIVEP3 (LOC103143192), transcript variant X1, mRNA
 phospholipid phosphatase-related protein type 5-like (LOC103137740), transcript variant X2, mRNA
 serine/arginine repetitive matrix protein 2-like (LOC103155911), transcript variant X1, mRNA
 GRAM domain containing 1B (gramd1b), transcript variant X10, mRNA
-gamma-aminobutyric acid type A receptor alpha5 subunit (gabra5), transcript variant X2, mRNA
 histone H3.3 (LOC103144155), transcript variant X1, mRNA
 engulfment and cell motility 2 (elmo2), transcript variant X5, mRNA
-ubiquitin protein ligase E3 component n-recognin 4 (ubr4), transcript variant X2, mRNA
-FCH and double SH3 domains 2 (fchsd2), transcript variant X3, mRNA
 calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X17, mRNA
-G3BP stress granule assembly factor 2 (g3bp2), transcript variant X3, mRNA
 follicle stimulating hormone beta subunit (fshb), transcript variant X1, mRNA
 uncharacterized LOC103132514 (LOC103132514), transcript variant X2, mRNA
 GRAM domain-containing protein 3-like (LOC103130039), transcript variant X1, mRNA
@@ -170,33 +122,29 @@ nuclear receptor coactivator 5-like (LOC103134574), transcript variant X4, mRNA
 DNA (cytosine-5)-methyltransferase 3A-like (LOC103153066), transcript variant X8, mRNA
 reticulon 1 (rtn1), transcript variant X1, mRNA
 CUGBP Elav-like family member 2 (LOC103154906), transcript variant X6, mRNA
-voltage-dependent anion-selective channel protein 3-like (LOC103155566), transcript variant X1, mRNA
-midline 2 (mid2), transcript variant X5, mRNA
-sarcoglycan epsilon (sgce), transcript variant X3, mRNA
+gastrula zinc finger protein XlCGF26.1-like (LOC103149993), transcript variant X1, mRNA
 MYC binding protein 2, E3 ubiquitin protein ligase (mycbp2), transcript variant X15, mRNA
 mitogen-activated protein kinase 8 interacting protein 3 (mapk8ip3), transcript variant X11, mRNA
 vav guanine nucleotide exchange factor 3 (vav3), transcript variant X2, mRNA
 leucine rich repeat containing 4C (lrrc4c), transcript variant X1, mRNA
 RWD domain containing 3 (rwdd3), transcript variant X1, mRNA
 transmembrane protein 237B-like (LOC103149409), transcript variant X1, mRNA
-ETS variant 6 (etv6), transcript variant X2, mRNA
-SEC24 homolog A, COPII coat complex component (sec24a), transcript variant X4, mRNA
 serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit gamma isoform-like (LOC103155530), transcript variant X1, mRNA
-R3H domain and coiled-coil containing 1 like (r3hcc1l), transcript variant X1, mRNA
 tuberous sclerosis 2 (tsc2), transcript variant X5, mRNA
 kinectin 1 (ktn1), transcript variant X9, mRNA
+Rho GTPase activating protein 5 (arhgap5), transcript variant X2, mRNA
 zinc finger protein 521 (znf521), transcript variant X3, mRNA
 sodium/potassium/calcium exchanger 1-like (LOC103141262), transcript variant X3, mRNA
 zinc finger protein 521 (znf521), transcript variant X5, mRNA
 BTB domain and CNC homolog 2 (bach2), transcript variant X4, mRNA
 TRAF3 interacting protein 1 (traf3ip1), transcript variant X7, mRNA
-leucine-rich repeat-containing protein 24-like (LOC103130497), transcript variant X5, mRNA
 protein FAM49A-like (LOC103143294), transcript variant X4, mRNA
 scribbled planar cell polarity protein (scrib), transcript variant X16, mRNA
 carbonic anhydrase 5A (ca5a), transcript variant X2, mRNA
 dachshund homolog 1 (LOC103134744), transcript variant X2, mRNA
 tubulin polymerization promoting protein (tppp), transcript variant X2, mRNA
 HIV-1 Tat interactive protein 2 (htatip2), transcript variant X2, mRNA
+IgLON family member 5 (iglon5), transcript variant X1, mRNA
 tripartite motif-containing protein 46-like (LOC103144483), transcript variant X2, mRNA
 plasminogen activator inhibitor 1 RNA-binding protein-like (LOC103155179), transcript variant X2, mRNA
 DNA helicase INO80-like (LOC103144191), transcript variant X2, mRNA
@@ -204,13 +152,11 @@ MTSS1-like protein (LOC103144384), transcript variant X7, mRNA
 ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 1 (arap1), transcript variant X5, mRNA
 RNA-binding protein 6-like (LOC103137219), transcript variant X2, mRNA
 potassium voltage-gated channel subfamily KQT member 2-like (LOC107834987), mRNA
-hormone-sensitive lipase-like (LOC103143485), transcript variant X4, misc_RNA
 moesin-like (LOC103139927), transcript variant X8, mRNA
 DIX domain containing 1 (dixdc1), transcript variant X4, mRNA
 semaphorin-6D-like (LOC103129680), transcript variant X4, mRNA
 SHC-transforming protein 3 (LOC103142750), transcript variant X6, mRNA
 immunoglobulin superfamily member 8-like (LOC103135839), transcript variant X1, mRNA
-IgLON family member 5 (iglon5), transcript variant X1, mRNA
 hepatocyte growth factor (hgf), transcript variant X1, mRNA
 nudC nuclear distribution protein (nudc), transcript variant X2, mRNA
 erythrocyte membrane protein band 4.1 like 3 (epb41l3), transcript variant X15, mRNA
@@ -218,20 +164,23 @@ cleavage and polyadenylation factor I subunit 1 (clp1), transcript variant X2, m
 SPEG complex locus (speg), transcript variant X5, mRNA
 oxysterol binding protein like 11 (osbpl11), transcript variant X1, misc_RNA
 SAP30 binding protein (sap30bp), transcript variant X2, mRNA
-ubiquitin specific peptidase 13 (isopeptidase T-3) (usp13), transcript variant X2, mRNA
 pleckstrin homology domain-containing family G member 4B-like (LOC103139529), transcript variant X2, mRNA
+R3H domain and coiled-coil containing 1 like (r3hcc1l), transcript variant X1, mRNA
 phosphatase and actin regulator 4B (LOC103143156), transcript variant X4, mRNA
 pleckstrin homology and RUN domain containing M2 (plekhm2), transcript variant X4, mRNA
 tetraspanin-11-like (LOC103146208), transcript variant X3, mRNA
+LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X30, mRNA
+angiotensin-converting enzyme-like (LOC103142748), transcript variant X2, mRNA
 cytosolic purine 5'-nucleotidase (LOC103131482), transcript variant X3, mRNA
 ATPase plasma membrane Ca2+ transporting 2 (atp2b2), transcript variant X11, mRNA
 collagen type VI alpha 2 (col6a2), transcript variant X3, mRNA
 nucleoside diphosphate kinase 3-like (LOC103153344), transcript variant X2, mRNA
-heparan sulfate proteoglycan 2 (hspg2), transcript variant X9, mRNA
-ribosomal RNA processing protein 1 homolog A-like (LOC103130655), transcript variant X1, mRNA
+N-glycanase 1 (ngly1), transcript variant X3, mRNA
+casein kinase II subunit alpha-like (LOC103143085), mRNA
 interferon regulatory factor 2-binding protein 2-B-like (LOC103146649), transcript variant X2, misc_RNA
 microtubule associated protein 7 (map7), transcript variant X11, mRNA
 cyclin-dependent kinase 8 (cdk8), transcript variant X2, mRNA
+ribosomal RNA processing protein 1 homolog A-like (LOC103130655), transcript variant X1, mRNA
 dedicator of cytokinesis 9 (dock9), transcript variant X13, mRNA
 ankyrin repeat domain 26 (ankrd26), transcript variant X11, mRNA
 tetratricopeptide repeat protein 21B-like (LOC103134360), transcript variant X1, mRNA
@@ -239,27 +188,23 @@ pleckstrin homology-like domain family B member 1 (LOC103145666), transcript var
 uncharacterized LOC103146429 (LOC103146429), transcript variant X1, mRNA
 YEATS domain containing 4 (yeats4), transcript variant X1, mRNA
 methyl-CpG-binding domain protein 3-like (LOC103149827), transcript variant X7, mRNA
+caM kinase-like vesicle-associated protein (LOC103137233), transcript variant X1, mRNA
+Kirsten rat sarcoma viral oncogene homolog (kras), transcript variant X1, mRNA
 intestinal cell (MAK-like) kinase (ick), transcript variant X2, mRNA
-casein kinase II subunit alpha-like (LOC103143085), mRNA
-angiotensin-converting enzyme-like (LOC103142748), transcript variant X2, mRNA
 protein FAM133B-like (LOC107837988), transcript variant X1, mRNA
 tumor necrosis factor receptor superfamily member 9-like (LOC103139032), mRNA
-caM kinase-like vesicle-associated protein (LOC103137233), transcript variant X1, mRNA
 calcitonin receptor (calcr), transcript variant X4, mRNA
-Rho GTPase activating protein 5 (arhgap5), transcript variant X2, mRNA
 SET domain containing 6 (setd6), transcript variant X1, mRNA
-LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X30, mRNA
-tumor necrosis factor receptor superfamily member 6B-like (LOC103151201), mRNA
 R-spondin-3-like (LOC103136893), mRNA
-Kirsten rat sarcoma viral oncogene homolog (kras), transcript variant X1, mRNA
+tumor necrosis factor receptor superfamily member 6B-like (LOC103151201), mRNA
 putative lysozyme-like protein (LOC103141841), transcript variant X2, mRNA
 uncharacterized LOC103137390 (LOC103137390), transcript variant X2, mRNA
-protease, serine 56 (prss56), transcript variant X3, mRNA
 pyroglutamyl-peptidase 1-like (LOC103131443), transcript variant X2, mRNA
-N-glycanase 1 (ngly1), transcript variant X3, mRNA
+secretagogin-like (LOC103149724), mRNA
+SLIT and NTRK-like protein 5 (LOC103134249), transcript variant X2, mRNA
 SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4 (smarca4), transcript variant X3, mRNA
-serine/arginine-rich splicing factor 7 (srsf7), transcript variant X1, mRNA
-NOP2 nucleolar protein (nop2), transcript variant X3, mRNA
-zinc finger protein 384-like (LOC103146383), transcript variant X8, mRNA
 calcium-independent phospholipase A2-gamma-like (LOC103134425), mRNA
+N-glycanase 1 (ngly1), transcript variant X4, mRNA
+cell adhesion associated, oncogene regulated (cdon), transcript variant X1, mRNA
 cell adhesion molecule 2-like (LOC103140738), transcript variant X3, mRNA
+FERM domain containing 7 (frmd7), transcript variant X2, mRNA

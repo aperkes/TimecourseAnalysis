@@ -2,19 +2,14 @@ Gene info
 >XM_007540860.2 PREDICTED: Poecilia formosa hepatoma-derived growth factor-related protein 3 (LOC103129684), transcript variant X2, mRNA
 >XM_007541421.2 PREDICTED: Poecilia formosa CSC1-like protein 2 (LOC103130112), transcript variant X1, mRNA
 >XM_007544503.2 PREDICTED: Poecilia formosa BTB/POZ domain-containing protein 3 (LOC103132703), mRNA
->XM_007548556.2 PREDICTED: Poecilia formosa pituitary adenylate cyclase-activating polypeptide type I receptor-like (LOC103135700), transcript variant X2, mRNA
->XM_007556978.2 PREDICTED: Poecilia formosa tankyrase-1-like (LOC103141352), transcript variant X1, mRNA
 >XM_007567516.2 PREDICTED: Poecilia formosa glycine-rich cell wall structural protein 1.8-like (LOC103148643), transcript variant X2, mRNA
 >XM_007571333.2 PREDICTED: Poecilia formosa sidekick cell adhesion molecule 2 (sdk2), transcript variant X7, mRNA
 >XM_016668281.1 PREDICTED: Poecilia formosa disks large-associated protein 2-like (LOC103132202), transcript variant X4, mRNA
 >XM_016669529.1 PREDICTED: Poecilia formosa dedicator of cytokinesis 8 (dock8), transcript variant X2, mRNA
 >XM_016671304.1 PREDICTED: Poecilia formosa RNA binding protein fox-1 homolog 2-like (LOC103137756), transcript variant X4, mRNA
 >XM_016671662.1 PREDICTED: Poecilia formosa ryanodine receptor 1-like (LOC103138257), transcript variant X12, mRNA
->XM_016674049.1 PREDICTED: Poecilia formosa bromodomain containing 8 (brd8), transcript variant X6, mRNA
 >XM_016675244.1 PREDICTED: Poecilia formosa PPARG coactivator 1 alpha (ppargc1a), transcript variant X9, mRNA
 >XM_016678020.1 PREDICTED: Poecilia formosa microtubule-associated protein 4-like (LOC103146972), transcript variant X5, mRNA
->XM_007548596.2 PREDICTED: Poecilia formosa alanine aminotransferase 2-like (LOC103135722), transcript variant X2, mRNA
->XM_016674397.1 PREDICTED: Poecilia formosa zinc finger protein 652 (znf652), transcript variant X2, mRNA
 >XM_016679576.1 PREDICTED: Poecilia formosa myomegalin-like (LOC103148914), transcript variant X11, mRNA
 >XR_001663758.1 PREDICTED: Poecilia formosa uncharacterized LOC103146863 (LOC103146863), transcript variant X4, ncRNA
 >XM_016674301.1 PREDICTED: Poecilia formosa vacuole membrane protein 1-like (LOC103142090), transcript variant X1, mRNA
@@ -22,9 +17,7 @@ Gene info
 >XM_016678915.1 PREDICTED: Poecilia formosa netrin G1 (ntng1), transcript variant X7, mRNA
 >XM_007565081.2 PREDICTED: Poecilia formosa microtubule-associated protein 4-like (LOC103146972), transcript variant X6, mRNA
 >XM_007548053.2 PREDICTED: Poecilia formosa golgi membrane protein 1 (golm1), transcript variant X1, mRNA
->XM_007548228.2 PREDICTED: Poecilia formosa potassium voltage-gated channel subfamily D member 3-like (LOC103135478), transcript variant X1, mRNA
 >XM_007567617.2 PREDICTED: Poecilia formosa max-interacting protein 1-like (LOC103148717), transcript variant X2, mRNA
->XM_007550497.2 PREDICTED: Poecilia formosa ubiquitin protein ligase E3 component n-recognin 5 (ubr5), transcript variant X7, mRNA
 >XM_007559233.2 PREDICTED: Poecilia formosa transforming acidic coiled-coil containing protein 1 (tacc1), transcript variant X3, mRNA
 >XM_016679038.1 PREDICTED: Poecilia formosa cryptochrome-1-like (LOC103148191), transcript variant X1, mRNA
 >XM_007545691.2 PREDICTED: Poecilia formosa protein phosphatase 6 regulatory subunit 2 (ppp6r2), transcript variant X4, mRNA
@@ -32,9 +25,10 @@ Gene info
 >XM_016675231.1 PREDICTED: Poecilia formosa solute carrier family 24 member 2 (slc24a2), transcript variant X5, mRNA
 >XM_007575651.2 PREDICTED: Poecilia formosa glutamate ionotropic receptor NMDA type subunit 1 (grin1), transcript variant X10, mRNA
 >XM_016677428.1 PREDICTED: Poecilia formosa cullin-3 (LOC103146285), transcript variant X2, mRNA
+>XM_007548596.2 PREDICTED: Poecilia formosa alanine aminotransferase 2-like (LOC103135722), transcript variant X2, mRNA
 >XM_016673340.1 PREDICTED: Poecilia formosa synaptojanin-1-like (LOC103140345), transcript variant X7, mRNA
->XM_016665271.1 PREDICTED: Poecilia formosa disks large homolog 4-like (LOC103129600), transcript variant X4, mRNA
 >XM_016674135.1 PREDICTED: Poecilia formosa solute carrier family 9 member A8 (slc9a8), transcript variant X1, mRNA
+>XM_016674397.1 PREDICTED: Poecilia formosa zinc finger protein 652 (znf652), transcript variant X2, mRNA
 >XM_016661151.1 PREDICTED: Poecilia formosa sarcoglycan epsilon (sgce), transcript variant X4, mRNA
 >XM_007553554.2 PREDICTED: Poecilia formosa YTH domain-containing family protein 1-like (LOC103139080), transcript variant X2, mRNA
 >XM_007565225.2 PREDICTED: Poecilia formosa hepatic leukemia factor-like (LOC103147070), transcript variant X1, mRNA
@@ -48,13 +42,9 @@ Gene info
 >XM_007559882.2 PREDICTED: Poecilia formosa cyclin Y (ccny), transcript variant X1, mRNA
 >XM_016672518.1 PREDICTED: Poecilia formosa calmodulin-binding transcription activator 2-like (LOC103139503), transcript variant X4, mRNA
 >XM_016661567.1 PREDICTED: Poecilia formosa protocadherin 19 (pcdh19), transcript variant X7, mRNA
->XM_007578563.2 PREDICTED: Poecilia formosa non-muscle caldesmon-like (LOC103156466), transcript variant X7, mRNA
 >XM_007564990.2 PREDICTED: Poecilia formosa pre-B-cell leukemia homeobox 3 (pbx3), transcript variant X2, mRNA
 >XM_016672553.1 PREDICTED: Poecilia formosa arf-GAP with coiled-coil, ANK repeat and PH domain-containing protein 3-like (LOC103139499), transcript variant X1, mRNA
->XM_007568604.2 PREDICTED: Poecilia formosa cell adhesion molecule 2-like (LOC103149435), transcript variant X1, mRNA
->XM_016668327.1 PREDICTED: Poecilia formosa RNA-binding protein Musashi homolog 2 (LOC103133943), transcript variant X5, mRNA
 >XM_016673039.1 PREDICTED: Poecilia formosa ribosomal protein S16 (rps16), transcript variant X2, mRNA
->XM_007577420.2 PREDICTED: Poecilia formosa cadherin EGF LAG seven-pass G-type receptor 3 (celsr3), transcript variant X2, mRNA
 >XM_007550121.2 PREDICTED: Poecilia formosa intermediate filament family orphan 1 (iffo1), transcript variant X6, mRNA
 >XM_007554161.2 PREDICTED: Poecilia formosa calmodulin-binding transcription activator 2-like (LOC103139503), transcript variant X1, mRNA
 >XM_016669483.1 PREDICTED: Poecilia formosa neurotrophic receptor tyrosine kinase 2 (ntrk2), transcript variant X5, mRNA
@@ -63,7 +53,6 @@ Gene info
 >XM_016680565.1 PREDICTED: Poecilia formosa pleckstrin homology domain-containing family A member 5-like (LOC103150271), transcript variant X12, mRNA
 >XM_007572298.2 PREDICTED: Poecilia formosa dynamin 2 (dnm2), transcript variant X5, mRNA
 >XM_016674023.1 PREDICTED: Poecilia formosa testis expressed 2 (tex2), transcript variant X3, mRNA
->XM_016680228.1 PREDICTED: Poecilia formosa unc-13 homolog A (C. elegans) (unc13a), transcript variant X6, mRNA
 >XM_007577294.2 PREDICTED: Poecilia formosa phosphatidylinositol transfer protein beta isoform-like (LOC103155570), transcript variant X2, mRNA
 >XM_007546522.1 PREDICTED: Poecilia formosa glutamate ionotropic receptor kainate type subunit 2 (grik2), transcript variant X1, mRNA
 >XM_007546855.2 PREDICTED: Poecilia formosa mannosidase beta like (manbal), transcript variant X1, mRNA
@@ -72,37 +61,22 @@ Gene info
 >XM_007551160.2 PREDICTED: Poecilia formosa calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X1, mRNA
 >XM_016668513.1 PREDICTED: Poecilia formosa mitochondrial calcium uniporter (mcu), transcript variant X2, mRNA
 >XM_007559447.2 PREDICTED: Poecilia formosa eukaryotic translation initiation factor 4 gamma 1-like (LOC103143052), transcript variant X11, mRNA
->XM_016671754.1 PREDICTED: Poecilia formosa serine/threonine-protein kinase WNK2-like (LOC103138089), transcript variant X2, mRNA
+>XM_016665954.1 PREDICTED: Poecilia formosa leucine-rich repeat-containing protein 24-like (LOC103130497), transcript variant X5, mRNA
 >XM_007551187.2 PREDICTED: Poecilia formosa staufen double-stranded RNA binding protein 1 (stau1), transcript variant X1, mRNA
->XM_007553521.2 PREDICTED: Poecilia formosa lysine-specific demethylase 5C-like (LOC103139054), transcript variant X1, mRNA
 >XM_016670967.1 PREDICTED: Poecilia formosa calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X13, mRNA
 >XM_007558767.2 PREDICTED: Poecilia formosa LDL receptor related protein 4 (lrp4), transcript variant X2, mRNA
->XM_007549601.2 PREDICTED: Poecilia formosa FAT atypical cadherin 1 (fat1), transcript variant X3, mRNA
 >XM_007575582.2 PREDICTED: Poecilia formosa BMS1, ribosome biogenesis factor (bms1), transcript variant X2, mRNA
 >XM_007560155.2 PREDICTED: Poecilia formosa cyclin-dependent kinase-like 5 (LOC103143564), transcript variant X6, mRNA
->XM_007548067.2 PREDICTED: Poecilia formosa heterogeneous nuclear ribonucleoprotein K (hnrnpk), transcript variant X1, mRNA
->XM_016664063.1 PREDICTED: Poecilia formosa syntaphilin (snph), transcript variant X3, mRNA
 >XM_007562906.2 PREDICTED: Poecilia formosa sperm associated antigen 9 (spag9), transcript variant X6, mRNA
 >XM_016674377.1 PREDICTED: Poecilia formosa protein phosphatase 1 regulatory inhibitor subunit 1B (ppp1r1b), transcript variant X1, mRNA
->XM_007563918.2 PREDICTED: Poecilia formosa semaphorin 6D (sema6d), transcript variant X6, mRNA
+>XM_016665271.1 PREDICTED: Poecilia formosa disks large homolog 4-like (LOC103129600), transcript variant X4, mRNA
 >XM_007564204.2 PREDICTED: Poecilia formosa rabphilin 3A (rph3a), transcript variant X2, mRNA
 >XR_001661434.1 PREDICTED: Poecilia formosa protocadherin-17-like (LOC103134390), transcript variant X2, misc_RNA
->XM_016678580.1 PREDICTED: Poecilia formosa sodium channel protein type 8 subunit alpha-like (LOC103147638), transcript variant X2, mRNA
->XM_007566830.2 PREDICTED: Poecilia formosa tumor protein D52 like 2 (tpd52l2), transcript variant X9, mRNA
->XM_016670946.1 PREDICTED: Poecilia formosa LIM domain-binding protein 2 (LOC103137320), transcript variant X1, mRNA
->XM_007567208.2 PREDICTED: Poecilia formosa phosphatidylinositol transfer protein, cytoplasmic 1 (pitpnc1), transcript variant X1, mRNA
 >XM_007560570.2 PREDICTED: Poecilia formosa beta-1,3-galactosyltransferase 2-like (LOC103143863), transcript variant X1, mRNA
->XM_007574394.2 PREDICTED: Poecilia formosa serine/arginine repetitive matrix protein 1-like (LOC103153450), transcript variant X3, mRNA
->XM_007577944.2 PREDICTED: Poecilia formosa vesicle-associated membrane protein-associated protein B (LOC103156041), transcript variant X1, mRNA
 >XM_016672545.1 PREDICTED: Poecilia formosa CUGBP Elav-like family member 4 (LOC103139573), transcript variant X1, mRNA
->XM_016669143.1 PREDICTED: Poecilia formosa RUN and SH3 domain containing 2 (rusc2), transcript variant X1, mRNA
 >XM_016661213.1 PREDICTED: Poecilia formosa CASK interacting protein 1 (caskin1), transcript variant X6, mRNA
->XM_016664556.1 PREDICTED: Poecilia formosa glutamate metabotropic receptor 8 (grm8), transcript variant X7, mRNA
->XM_016662157.1 PREDICTED: Poecilia formosa dishevelled associated activator of morphogenesis 2 (daam2), transcript variant X3, mRNA
->XM_007559114.2 PREDICTED: Poecilia formosa EWS RNA binding protein 1 (ewsr1), transcript variant X2, mRNA
 >XM_007549279.2 PREDICTED: Poecilia formosa G-patch domain containing 2 like (gpatch2l), transcript variant X2, mRNA
 >XM_016664582.1 PREDICTED: Poecilia formosa LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X9, mRNA
->XM_016678845.1 PREDICTED: Poecilia formosa NMDA receptor synaptonuclear signaling and neuronal migration factor (nsmf), transcript variant X1, mRNA
 >XM_007563601.2 PREDICTED: Poecilia formosa mediator complex subunit 22 (med22), transcript variant X3, mRNA
 >XM_016680720.1 PREDICTED: Poecilia formosa protein kinase C zeta (prkcz), transcript variant X5, mRNA
 >XM_016660991.1 PREDICTED: Poecilia formosa tubulin polymerization promoting protein (tppp), transcript variant X5, mRNA
@@ -110,57 +84,35 @@ Gene info
 >XM_007578693.2 PREDICTED: Poecilia formosa G protein-coupled receptor 85 (gpr85), transcript variant X1, mRNA
 >XM_007563834.2 PREDICTED: Poecilia formosa RNA-binding Raly-like protein (LOC103146091), transcript variant X4, mRNA
 >XM_016662498.1 PREDICTED: Poecilia formosa protein tyrosine phosphatase type IVA 2-like (LOC103154193), transcript variant X2, mRNA
->XM_007561425.2 PREDICTED: Poecilia formosa carnitine O-palmitoyltransferase 1, liver isoform-like (LOC103144435), transcript variant X4, mRNA
->XM_007555942.2 PREDICTED: Poecilia formosa microtubule-associated tumor suppressor candidate 2-like (LOC103140686), transcript variant X2, mRNA
 >XM_016669456.1 PREDICTED: Poecilia formosa ubiquitin-associated protein 2-like (LOC103135352), transcript variant X2, mRNA
->XM_016679163.1 PREDICTED: Poecilia formosa dystrobrevin beta (dtnb), transcript variant X4, mRNA
 >XM_007572689.2 PREDICTED: Poecilia formosa family with sequence similarity 188 member A (fam188a), transcript variant X1, mRNA
->XM_007576486.2 PREDICTED: Poecilia formosa protein argonaute-4 (LOC103154986), transcript variant X3, mRNA
->XM_016668794.1 PREDICTED: Poecilia formosa SRSF protein kinase 2-like (LOC103134474), transcript variant X4, mRNA
->XM_016680372.1 PREDICTED: Poecilia formosa golgin A2 (golga2), transcript variant X4, mRNA
 >XM_016669610.1 PREDICTED: Poecilia formosa SAM and SH3 domain containing 1 (sash1), transcript variant X4, mRNA
 >XM_007551716.2 PREDICTED: Poecilia formosa general transcription factor IIE subunit 2 (gtf2e2), transcript variant X1, mRNA
->XM_007559577.2 PREDICTED: Poecilia formosa receptor-type tyrosine-protein phosphatase U (LOC103143151), transcript variant X2, mRNA
->XM_016676865.1 PREDICTED: Poecilia formosa sperm associated antigen 9 (spag9), transcript variant X3, mRNA
 >XM_016665353.1 PREDICTED: Poecilia formosa rap1 GTPase-activating protein 2-like (LOC103129740), transcript variant X3, mRNA
 >XM_007540951.2 PREDICTED: Poecilia formosa ras and Rab interactor 2-like (LOC103129762), transcript variant X2, mRNA
->XM_007567283.2 PREDICTED: Poecilia formosa nephronectin (npnt), transcript variant X2, mRNA
 >XM_007545543.2 PREDICTED: Poecilia formosa aryl hydrocarbon receptor nuclear translocator-like protein 2 (LOC103133689), transcript variant X1, mRNA
 >XM_016668888.1 PREDICTED: Poecilia formosa neuron navigator 1-like (LOC103134605), transcript variant X16, mRNA
 >XM_007575441.2 PREDICTED: Poecilia formosa 60S ribosomal protein L22 (LOC103154231), transcript variant X1, mRNA
->XM_016672532.1 PREDICTED: Poecilia formosa calpastatin (cast), transcript variant X13, mRNA
 >XM_016661311.1 PREDICTED: Poecilia formosa solute carrier family 22 member 2-like (LOC103152682), mRNA
 >XM_016670818.1 PREDICTED: Poecilia formosa SH3-domain GRB2-like (endophilin) interacting protein 1 (sgip1), transcript variant X12, mRNA
->XM_007569547.2 PREDICTED: Poecilia formosa zinc finger protein 618 (znf618), transcript variant X4, mRNA
->XM_007548552.2 PREDICTED: Poecilia formosa R3H domain containing 2 (r3hdm2), transcript variant X4, mRNA
 >XM_007549334.2 PREDICTED: Poecilia formosa zinc finger DHHC-type containing 22 (zdhhc22), mRNA
 >XM_016675447.1 PREDICTED: Poecilia formosa RNA binding protein fox-1 homolog 2-like (LOC103143659), transcript variant X1, mRNA
 >XM_016668161.1 PREDICTED: Poecilia formosa protein piccolo-like (LOC103133826), transcript variant X7, mRNA
 >XM_016676642.1 PREDICTED: Poecilia formosa family with sequence similarity 131 member A (fam131a), transcript variant X3, mRNA
->XM_007547219.2 PREDICTED: Poecilia formosa ankyrin repeat and IBR domain containing 1 (ankib1), transcript variant X6, mRNA
 >XM_007578452.2 PREDICTED: Poecilia formosa N(alpha)-acetyltransferase 20, NatB catalytic subunit (naa20), transcript variant X1, mRNA
->XM_016664954.1 PREDICTED: Poecilia formosa pituitary adenylate cyclase-activating polypeptide type I receptor-like (LOC103129767), transcript variant X2, mRNA
 >XM_016660753.1 PREDICTED: Poecilia formosa neighbor of BRCA1 gene 1 (nbr1), transcript variant X4, mRNA
->XM_007546979.2 PREDICTED: Poecilia formosa ankyrin repeat and IBR domain containing 1 (ankib1), transcript variant X7, mRNA
 >XM_016678917.1 PREDICTED: Poecilia formosa netrin G1 (ntng1), transcript variant X9, mRNA
 >XM_016672100.1 PREDICTED: Poecilia formosa ubiquitin protein ligase E3 component n-recognin 4 (ubr4), transcript variant X7, mRNA
+>XM_007568604.2 PREDICTED: Poecilia formosa cell adhesion molecule 2-like (LOC103149435), transcript variant X1, mRNA
 >XM_007555657.2 PREDICTED: Poecilia formosa calcium voltage-gated channel auxiliary subunit beta 2 (cacnb2), transcript variant X5, mRNA
->XM_016679289.1 PREDICTED: Poecilia formosa synergin, gamma (synrg), transcript variant X6, mRNA
->XM_016677255.1 PREDICTED: Poecilia formosa signal peptide peptidase like 2B (sppl2b), transcript variant X3, mRNA
->XM_007549945.2 PREDICTED: Poecilia formosa aryl hydrocarbon receptor nuclear translocator-like (LOC103136619), transcript variant X11, mRNA
->XM_007577162.2 PREDICTED: Poecilia formosa zinc finger protein 36, C3H1 type-like 2 (LOC103155467), transcript variant X1, mRNA
 >XM_007557097.2 PREDICTED: Poecilia formosa midline 1 (mid1), transcript variant X1, mRNA
 >XM_016675025.1 PREDICTED: Poecilia formosa transcription factor HIVEP3 (LOC103143192), transcript variant X1, mRNA
 >XM_016671326.1 PREDICTED: Poecilia formosa phospholipid phosphatase-related protein type 5-like (LOC103137740), transcript variant X2, mRNA
 >XM_007577795.2 PREDICTED: Poecilia formosa serine/arginine repetitive matrix protein 2-like (LOC103155911), transcript variant X1, mRNA
 >XM_016662853.1 PREDICTED: Poecilia formosa GRAM domain containing 1B (gramd1b), transcript variant X10, mRNA
->XM_016679846.1 PREDICTED: Poecilia formosa gamma-aminobutyric acid type A receptor alpha5 subunit (gabra5), transcript variant X2, mRNA
 >XM_007561008.2 PREDICTED: Poecilia formosa histone H3.3 (LOC103144155), transcript variant X1, mRNA
 >XM_007561230.2 PREDICTED: Poecilia formosa engulfment and cell motility 2 (elmo2), transcript variant X5, mRNA
->XM_016672095.1 PREDICTED: Poecilia formosa ubiquitin protein ligase E3 component n-recognin 4 (ubr4), transcript variant X2, mRNA
->XM_016676938.1 PREDICTED: Poecilia formosa FCH and double SH3 domains 2 (fchsd2), transcript variant X3, mRNA
 >XM_007551169.2 PREDICTED: Poecilia formosa calcium/calmodulin-dependent protein kinase type II subunit gamma (LOC103137428), transcript variant X17, mRNA
->XM_007561951.2 PREDICTED: Poecilia formosa G3BP stress granule assembly factor 2 (g3bp2), transcript variant X3, mRNA
 >XM_007568986.2 PREDICTED: Poecilia formosa follicle stimulating hormone beta subunit (fshb), transcript variant X1, mRNA
 >XM_007544317.2 PREDICTED: Poecilia formosa uncharacterized LOC103132514 (LOC103132514), transcript variant X2, mRNA
 >XM_007541320.2 PREDICTED: Poecilia formosa GRAM domain-containing protein 3-like (LOC103130039), transcript variant X1, mRNA
@@ -170,33 +122,29 @@ Gene info
 >XM_016665162.1 PREDICTED: Poecilia formosa DNA (cytosine-5)-methyltransferase 3A-like (LOC103153066), transcript variant X8, mRNA
 >XM_007576188.2 PREDICTED: Poecilia formosa reticulon 1 (rtn1), transcript variant X1, mRNA
 >XM_016663157.1 PREDICTED: Poecilia formosa CUGBP Elav-like family member 2 (LOC103154906), transcript variant X6, mRNA
->XM_016663662.1 PREDICTED: Poecilia formosa voltage-dependent anion-selective channel protein 3-like (LOC103155566), transcript variant X1, mRNA
->XM_007550381.2 PREDICTED: Poecilia formosa midline 2 (mid2), transcript variant X5, mRNA
->XM_016661150.1 PREDICTED: Poecilia formosa sarcoglycan epsilon (sgce), transcript variant X3, mRNA
+>XM_007569405.2 PREDICTED: Poecilia formosa gastrula zinc finger protein XlCGF26.1-like (LOC103149993), transcript variant X1, mRNA
 >XM_007547145.2 PREDICTED: Poecilia formosa MYC binding protein 2, E3 ubiquitin protein ligase (mycbp2), transcript variant X15, mRNA
 >XM_016676806.1 PREDICTED: Poecilia formosa mitogen-activated protein kinase 8 interacting protein 3 (mapk8ip3), transcript variant X11, mRNA
 >XM_007566589.2 PREDICTED: Poecilia formosa vav guanine nucleotide exchange factor 3 (vav3), transcript variant X2, mRNA
 >XM_016668038.1 PREDICTED: Poecilia formosa leucine rich repeat containing 4C (lrrc4c), transcript variant X1, mRNA
 >XM_007541306.2 PREDICTED: Poecilia formosa RWD domain containing 3 (rwdd3), transcript variant X1, mRNA
 >XM_016679890.1 PREDICTED: Poecilia formosa transmembrane protein 237B-like (LOC103149409), transcript variant X1, mRNA
->XM_007573075.2 PREDICTED: Poecilia formosa ETS variant 6 (etv6), transcript variant X2, mRNA
->XM_016663797.1 PREDICTED: Poecilia formosa SEC24 homolog A, COPII coat complex component (sec24a), transcript variant X4, mRNA
 >XM_007577243.2 PREDICTED: Poecilia formosa serine/threonine-protein phosphatase 2A 56 kDa regulatory subunit gamma isoform-like (LOC103155530), transcript variant X1, mRNA
->XM_007570248.2 PREDICTED: Poecilia formosa R3H domain and coiled-coil containing 1 like (r3hcc1l), transcript variant X1, mRNA
 >XM_007570224.2 PREDICTED: Poecilia formosa tuberous sclerosis 2 (tsc2), transcript variant X5, mRNA
 >XM_007553026.2 PREDICTED: Poecilia formosa kinectin 1 (ktn1), transcript variant X9, mRNA
+>XM_016665494.1 PREDICTED: Poecilia formosa Rho GTPase activating protein 5 (arhgap5), transcript variant X2, mRNA
 >XM_007559374.2 PREDICTED: Poecilia formosa zinc finger protein 521 (znf521), transcript variant X3, mRNA
 >XM_007556819.2 PREDICTED: Poecilia formosa sodium/potassium/calcium exchanger 1-like (LOC103141262), transcript variant X3, mRNA
 >XM_016674961.1 PREDICTED: Poecilia formosa zinc finger protein 521 (znf521), transcript variant X5, mRNA
 >XM_016680967.1 PREDICTED: Poecilia formosa BTB domain and CNC homolog 2 (bach2), transcript variant X4, mRNA
 >XM_016662012.1 PREDICTED: Poecilia formosa TRAF3 interacting protein 1 (traf3ip1), transcript variant X7, mRNA
->XM_016665954.1 PREDICTED: Poecilia formosa leucine-rich repeat-containing protein 24-like (LOC103130497), transcript variant X5, mRNA
 >XM_007559759.2 PREDICTED: Poecilia formosa protein FAM49A-like (LOC103143294), transcript variant X4, mRNA
 >XM_016678517.1 PREDICTED: Poecilia formosa scribbled planar cell polarity protein (scrib), transcript variant X16, mRNA
 >XM_007553197.2 PREDICTED: Poecilia formosa carbonic anhydrase 5A (ca5a), transcript variant X2, mRNA
 >XM_007547170.2 PREDICTED: Poecilia formosa dachshund homolog 1 (LOC103134744), transcript variant X2, mRNA
 >XM_016660989.1 PREDICTED: Poecilia formosa tubulin polymerization promoting protein (tppp), transcript variant X2, mRNA
 >XM_016674718.1 PREDICTED: Poecilia formosa HIV-1 Tat interactive protein 2 (htatip2), transcript variant X2, mRNA
+>XM_007553817.2 PREDICTED: Poecilia formosa IgLON family member 5 (iglon5), transcript variant X1, mRNA
 >XM_007561492.2 PREDICTED: Poecilia formosa tripartite motif-containing protein 46-like (LOC103144483), transcript variant X2, mRNA
 >XM_007576756.2 PREDICTED: Poecilia formosa plasminogen activator inhibitor 1 RNA-binding protein-like (LOC103155179), transcript variant X2, mRNA
 >XM_007561054.2 PREDICTED: Poecilia formosa DNA helicase INO80-like (LOC103144191), transcript variant X2, mRNA
@@ -204,13 +152,11 @@ Gene info
 >XM_007564133.2 PREDICTED: Poecilia formosa ArfGAP with RhoGAP domain, ankyrin repeat and PH domain 1 (arap1), transcript variant X5, mRNA
 >XM_016671073.1 PREDICTED: Poecilia formosa RNA-binding protein 6-like (LOC103137219), transcript variant X2, mRNA
 >XM_016667081.1 PREDICTED: Poecilia formosa potassium voltage-gated channel subfamily KQT member 2-like (LOC107834987), mRNA
->XR_001663080.1 PREDICTED: Poecilia formosa hormone-sensitive lipase-like (LOC103143485), transcript variant X4, misc_RNA
 >XM_016672793.1 PREDICTED: Poecilia formosa moesin-like (LOC103139927), transcript variant X8, mRNA
 >XM_007554369.2 PREDICTED: Poecilia formosa DIX domain containing 1 (dixdc1), transcript variant X4, mRNA
 >XM_007540856.2 PREDICTED: Poecilia formosa semaphorin-6D-like (LOC103129680), transcript variant X4, mRNA
 >XM_016674745.1 PREDICTED: Poecilia formosa SHC-transforming protein 3 (LOC103142750), transcript variant X6, mRNA
 >XM_007548779.2 PREDICTED: Poecilia formosa immunoglobulin superfamily member 8-like (LOC103135839), transcript variant X1, mRNA
->XM_007553817.2 PREDICTED: Poecilia formosa IgLON family member 5 (iglon5), transcript variant X1, mRNA
 >XM_007545662.2 PREDICTED: Poecilia formosa hepatocyte growth factor (hgf), transcript variant X1, mRNA
 >XM_007558384.2 PREDICTED: Poecilia formosa nudC nuclear distribution protein (nudc), transcript variant X2, mRNA
 >XM_016677460.1 PREDICTED: Poecilia formosa erythrocyte membrane protein band 4.1 like 3 (epb41l3), transcript variant X15, mRNA
@@ -218,20 +164,23 @@ Gene info
 >XM_016679407.1 PREDICTED: Poecilia formosa SPEG complex locus (speg), transcript variant X5, mRNA
 >XR_476379.2 PREDICTED: Poecilia formosa oxysterol binding protein like 11 (osbpl11), transcript variant X1, misc_RNA
 >XM_007561062.1 PREDICTED: Poecilia formosa SAP30 binding protein (sap30bp), transcript variant X2, mRNA
->XM_007552786.2 PREDICTED: Poecilia formosa ubiquitin specific peptidase 13 (isopeptidase T-3) (usp13), transcript variant X2, mRNA
 >XM_016672502.1 PREDICTED: Poecilia formosa pleckstrin homology domain-containing family G member 4B-like (LOC103139529), transcript variant X2, mRNA
+>XM_007570248.2 PREDICTED: Poecilia formosa R3H domain and coiled-coil containing 1 like (r3hcc1l), transcript variant X1, mRNA
 >XM_007559583.2 PREDICTED: Poecilia formosa phosphatase and actin regulator 4B (LOC103143156), transcript variant X4, mRNA
 >XM_007570095.2 PREDICTED: Poecilia formosa pleckstrin homology and RUN domain containing M2 (plekhm2), transcript variant X4, mRNA
 >XM_007564028.2 PREDICTED: Poecilia formosa tetraspanin-11-like (LOC103146208), transcript variant X3, mRNA
+>XM_007578912.2 PREDICTED: Poecilia formosa LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X30, mRNA
+>XM_016674903.1 PREDICTED: Poecilia formosa angiotensin-converting enzyme-like (LOC103142748), transcript variant X2, mRNA
 >XM_007543150.2 PREDICTED: Poecilia formosa cytosolic purine 5'-nucleotidase (LOC103131482), transcript variant X3, mRNA
 >XM_007549328.2 PREDICTED: Poecilia formosa ATPase plasma membrane Ca2+ transporting 2 (atp2b2), transcript variant X11, mRNA
 >XM_007552529.2 PREDICTED: Poecilia formosa collagen type VI alpha 2 (col6a2), transcript variant X3, mRNA
 >XM_007574228.2 PREDICTED: Poecilia formosa nucleoside diphosphate kinase 3-like (LOC103153344), transcript variant X2, mRNA
->XM_016664637.1 PREDICTED: Poecilia formosa heparan sulfate proteoglycan 2 (hspg2), transcript variant X9, mRNA
->XM_007542103.2 PREDICTED: Poecilia formosa ribosomal RNA processing protein 1 homolog A-like (LOC103130655), transcript variant X1, mRNA
+>XM_007558443.2 PREDICTED: Poecilia formosa N-glycanase 1 (ngly1), transcript variant X3, mRNA
+>XM_007559486.2 PREDICTED: Poecilia formosa casein kinase II subunit alpha-like (LOC103143085), mRNA
 >XR_001663704.1 PREDICTED: Poecilia formosa interferon regulatory factor 2-binding protein 2-B-like (LOC103146649), transcript variant X2, misc_RNA
 >XM_016671923.1 PREDICTED: Poecilia formosa microtubule associated protein 7 (map7), transcript variant X11, mRNA
 >XM_016672672.1 PREDICTED: Poecilia formosa cyclin-dependent kinase 8 (cdk8), transcript variant X2, mRNA
+>XM_007542103.2 PREDICTED: Poecilia formosa ribosomal RNA processing protein 1 homolog A-like (LOC103130655), transcript variant X1, mRNA
 >XM_016668677.1 PREDICTED: Poecilia formosa dedicator of cytokinesis 9 (dock9), transcript variant X13, mRNA
 >XM_016668814.1 PREDICTED: Poecilia formosa ankyrin repeat domain 26 (ankrd26), transcript variant X11, mRNA
 >XM_007546578.2 PREDICTED: Poecilia formosa tetratricopeptide repeat protein 21B-like (LOC103134360), transcript variant X1, mRNA
@@ -239,27 +188,23 @@ Gene info
 >XM_007564351.2 PREDICTED: Poecilia formosa uncharacterized LOC103146429 (LOC103146429), transcript variant X1, mRNA
 >XM_016677628.1 PREDICTED: Poecilia formosa YEATS domain containing 4 (yeats4), transcript variant X1, mRNA
 >XM_007569168.2 PREDICTED: Poecilia formosa methyl-CpG-binding domain protein 3-like (LOC103149827), transcript variant X7, mRNA
+>XM_007550887.2 PREDICTED: Poecilia formosa caM kinase-like vesicle-associated protein (LOC103137233), transcript variant X1, mRNA
+>XM_007545518.2 PREDICTED: Poecilia formosa Kirsten rat sarcoma viral oncogene homolog (kras), transcript variant X1, mRNA
 >XM_007546136.2 PREDICTED: Poecilia formosa intestinal cell (MAK-like) kinase (ick), transcript variant X2, mRNA
->XM_007559486.2 PREDICTED: Poecilia formosa casein kinase II subunit alpha-like (LOC103143085), mRNA
->XM_016674903.1 PREDICTED: Poecilia formosa angiotensin-converting enzyme-like (LOC103142748), transcript variant X2, mRNA
 >XM_016678978.1 PREDICTED: Poecilia formosa protein FAM133B-like (LOC107837988), transcript variant X1, mRNA
 >XM_007553474.2 PREDICTED: Poecilia formosa tumor necrosis factor receptor superfamily member 9-like (LOC103139032), mRNA
->XM_007550887.2 PREDICTED: Poecilia formosa caM kinase-like vesicle-associated protein (LOC103137233), transcript variant X1, mRNA
 >XM_007573018.2 PREDICTED: Poecilia formosa calcitonin receptor (calcr), transcript variant X4, mRNA
->XM_016665494.1 PREDICTED: Poecilia formosa Rho GTPase activating protein 5 (arhgap5), transcript variant X2, mRNA
 >XM_007553164.2 PREDICTED: Poecilia formosa SET domain containing 6 (setd6), transcript variant X1, mRNA
->XM_007578912.2 PREDICTED: Poecilia formosa LIM zinc-binding domain-containing Nebulette-like (LOC103156753), transcript variant X30, mRNA
->XM_007571124.2 PREDICTED: Poecilia formosa tumor necrosis factor receptor superfamily member 6B-like (LOC103151201), mRNA
 >XM_007550384.2 PREDICTED: Poecilia formosa R-spondin-3-like (LOC103136893), mRNA
->XM_007545518.2 PREDICTED: Poecilia formosa Kirsten rat sarcoma viral oncogene homolog (kras), transcript variant X1, mRNA
+>XM_007571124.2 PREDICTED: Poecilia formosa tumor necrosis factor receptor superfamily member 6B-like (LOC103151201), mRNA
 >XM_007557633.2 PREDICTED: Poecilia formosa putative lysozyme-like protein (LOC103141841), transcript variant X2, mRNA
 >XM_016671032.1 PREDICTED: Poecilia formosa uncharacterized LOC103137390 (LOC103137390), transcript variant X2, mRNA
->XM_007567944.2 PREDICTED: Poecilia formosa protease, serine 56 (prss56), transcript variant X3, mRNA
 >XM_007543093.2 PREDICTED: Poecilia formosa pyroglutamyl-peptidase 1-like (LOC103131443), transcript variant X2, mRNA
->XM_007558443.2 PREDICTED: Poecilia formosa N-glycanase 1 (ngly1), transcript variant X3, mRNA
+>XM_007569026.2 PREDICTED: Poecilia formosa secretagogin-like (LOC103149724), mRNA
+>XM_016668606.1 PREDICTED: Poecilia formosa SLIT and NTRK-like protein 5 (LOC103134249), transcript variant X2, mRNA
 >XM_007560334.2 PREDICTED: Poecilia formosa SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4 (smarca4), transcript variant X3, mRNA
->XM_007543680.2 PREDICTED: Poecilia formosa serine/arginine-rich splicing factor 7 (srsf7), transcript variant X1, mRNA
->XM_016670492.1 PREDICTED: Poecilia formosa NOP2 nucleolar protein (nop2), transcript variant X3, mRNA
->XM_016677558.1 PREDICTED: Poecilia formosa zinc finger protein 384-like (LOC103146383), transcript variant X8, mRNA
 >XM_007546658.2 PREDICTED: Poecilia formosa calcium-independent phospholipase A2-gamma-like (LOC103134425), mRNA
+>XM_016674458.1 PREDICTED: Poecilia formosa N-glycanase 1 (ngly1), transcript variant X4, mRNA
+>XM_007552322.2 PREDICTED: Poecilia formosa cell adhesion associated, oncogene regulated (cdon), transcript variant X1, mRNA
 >XM_007556026.2 PREDICTED: Poecilia formosa cell adhesion molecule 2-like (LOC103140738), transcript variant X3, mRNA
+>XM_016679741.1 PREDICTED: Poecilia formosa FERM domain containing 7 (frmd7), transcript variant X2, mRNA
