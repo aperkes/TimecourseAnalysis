@@ -20,6 +20,7 @@ samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',head
 rownames(samples) <- samples$SampleName
 head(samples[,c("Treatment",'Time','Batch')])
 
+script_dir = "~/Documents/Scripts/TimecourseAnalysis"
 data_dir = "/data/sequencing/TimeFights/results/Salmon_quant"
 data_dir = "~/Documents/Data/Salmon_quant"
 
@@ -147,13 +148,13 @@ res_shared <- res_justA[shared_genes_i,]
 
 ## Save all these to csv's so I can inspect gene id's
 write.csv(rownames(res_uniqueA[order(res_uniqueA$padj),]),
-          'unique_A.csv',row.names = FALSE)
+          file.path(script_dir,'unique_A.csv'),row.names = FALSE)
 write.csv(rownames(res_uniqueF[order(res_uniqueF$padj),]),
-          'unique_F.csv',row.names = FALSE)
+          file.path(script_dir,'unique_F.csv'),row.names = FALSE)
 write.csv(rownames(res_shared[order(res_shared$padj),]),
-          'shared_AF.csv',row.names = FALSE)
+          file.path(script_dir,'shared_AF.csv'),row.names = FALSE)
 write.csv(rownames(res_sig[order(res_sig$padj),]),
-          'all_sig.csv',row.names = FALSE)
+          file.path(script_dir,'all_sig.csv'),row.names = FALSE)
 
 
 ## On to the PCA! 
