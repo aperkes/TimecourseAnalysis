@@ -74,6 +74,12 @@ resD <- results(ddsD,contrast = c("Treatment","W","L"))
 resE <- results(ddsE,contrast = c("Treatment","W","L"))
 resF <- results(ddsF,contrast = c("Treatment","W","L"))
 
+
+#ddsAF <- dds_SigGenes[,samples$Time == 'A' | samples$Time == 'F']
+dds_S <- dds_SigGenes[,samples$Treatment == 'S']
+res_null <- results(dds_S,contrast = c("Time","A","G"))
+sum(abs(res_null$log2FoldChange))
+                    
 ## Get order that will split negative from positive
 log_order <- order(abs(res_sig$log2FoldChange),decreasing = TRUE)
 resOrdered <- res_sig[log_order,]
