@@ -101,6 +101,8 @@ E_counts <- countdata[,E_rows]
 F_counts <- countdata[,F_rows]
 
 ddsATable <- DESeqDataSetFromMatrix(countData=A_counts, colData=col_A, design = ~ Batch + PlannedTreatment) 
+ddsAshufTable <- DESeqDataSetFromMatrix(countData=A_counts, colData=col_A, design = ~ Batch + ShuffledTreatment) 
+
 ddsBTable <- DESeqDataSetFromMatrix(countData=B_counts, colData=col_B, design = ~ Batch + PlannedTreatment) 
 ddsCTable <- DESeqDataSetFromMatrix(countData=C_counts, colData=col_C, design = ~ Batch + PlannedTreatment) 
 ddsDTable <- DESeqDataSetFromMatrix(countData=D_counts, colData=col_D, design = ~ Batch + PlannedTreatment) 
@@ -108,13 +110,17 @@ ddsETable <- DESeqDataSetFromMatrix(countData=E_counts, colData=col_E, design = 
 ddsFTable <- DESeqDataSetFromMatrix(countData=F_counts, colData=col_F, design = ~ Batch + PlannedTreatment) 
 
 ddsA <- DESeq(ddsATable)
+ddsAshuf <- DESeq(ddsAshufTable)
+
 ddsB <- DESeq(ddsBTable)
 ddsC <- DESeq(ddsCTable)
 ddsD <- DESeq(ddsDTable)
 ddsE <- DESeq(ddsETable)
 ddsF <- DESeq(ddsFTable)
 
-res_A <- results(ddsA,contrast=c("PlannedTreatment","win","loss"))
+res_A <- results(ddsA,contrast=c("PlannedTreatment","win","control"))
+res_Ashuf <- results(ddsAshuf,contrast=c("ShuffledTreatment","win","control"))
+
 res_B <- results(ddsB,contrast=c("PlannedTreatment","win","loss"))
 res_C <- results(ddsC,contrast=c("PlannedTreatment","win","loss"))
 res_D <- results(ddsD,contrast=c("PlannedTreatment","win","loss"))
@@ -152,15 +158,21 @@ mean_order <-order(mean_diffs,decreasing = TRUE)
 
 A_statorder <- order(res_A$padj)
 F_statorder <- order(res_F$padj)
-All_statorder <- order(res$padj)
+#All_statorder <- order(res$padj)
+All_statorder <- order(res_full$padj)
 
 m_sorted <- diff_matrix[A_order,]
 
 ## It works a little different if you're using the stat order
-m_sorted <- head(diff_matrix[A_statorder,],n=100)
+m_sorted <- head(diff_matrix[All_statorder,],n=100)
+m_sorted <- head(diff_matrix[F_statorder,],n=100)
+m_pos <- m_sorted[rowMeans(m_sorted) > 0,]
+m_neg <- m_sorted[rowMeans(m_sorted) < 0,]
+m_extrema <- rbind(head(m_pos,n=50),head(m_neg,n=50))
 
 #m_sorted <- m_sorted[order(rowMeans(m_sorted),decreasing = TRUE),]
 m_sorted <- m_sorted[order(m_sorted[,1],decreasing = TRUE),]
+
 
 m_top = head(m_sorted,n=50)
 m_bottom = tail(m_sorted,n=50)
@@ -183,9 +195,24 @@ AX_genes <- intersect(A_genes,X_genes)
 FX_genes <- intersect(F_genes,X_genes)
 ## " End Here "
 
+## Shuffled
+ddsShuffledCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_full, design = ~ Batch + ShuffledTreatment + Time) # Batch effects can't be random effect here
+
+## Real
+ddsFullCountTable <- DESeqDataSetFromMatrix(countData=countdata_, colData=coldata_full, design = ~ Batch + PlannedTreatment + Time) # Batch effects can't be random effect here
+
 ddsFull <- DESeq(ddsFullCountTable) # this is the analysis!
 head(ddsFull)
 res_full = results(ddsFull,contrast = c("PlannedTreatment","win","loss"))
+
+#ddsShuffle <- DESeq(ddsShuffledCountTable)
+#res_shuffled = results(ddsShuffle,contrast = c("ShuffledTreatment","win","loss"))
+#res_full <- res_shuffled
+
+rfullOrdered <- res_full[order(res_full$padj),]
+head(rfullOrdered)
+sum(res_full$padj<0.05,na.rm=TRUE)
+
 
 ddsInteraction <-DESeq(ddsInteractionCountTable)
 head(ddsInteraction)

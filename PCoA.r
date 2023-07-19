@@ -105,7 +105,7 @@ resOrdered <- res[order(res$padj),]
 head(resOrdered)
 sum(res$padj<0.05,na.rm=TRUE)
 
-#plotMA(res)
+
 
 rld <- rlogTransformation(ddsSelect) # Not sure whether there are advantages
 
