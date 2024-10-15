@@ -22,6 +22,8 @@ library("edgeR")
 
 samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
 rownames(samples) <- samples$SampleName
+samples['BFF136','Group'] <- 'LF' ## There's a typo in one sample name
+
 head(samples[,c("Treatment",'Time','Batch')])
 
 script_dir = "~/Documents/Scripts/TimecourseAnalysis"
@@ -37,13 +39,30 @@ head(files)
 #txi <- tximport(files,type= "salmon",tx2gene=tx2gene)
 txi <- tximport(files,type= "salmon",txOut = TRUE)
 
+## only keep 
+countsPM.bool <- cpm(txi$counts) > 1
+countsPM.num <- 1*countsPM.bool
+group_sums <- rowsum(t(countsPM.num),samples$Group)
+
+## What this is saying is that it's in at least 
+##  four samples for every group. 
+keep.group <- apply(group_sums,2,FUN=min) >= 4 
+
+## Alternatively, I could use max to say that it's in at least 
+##  4 samples for at least 1 group. 
+keep.group <- apply(group_sums,2,FUN=max) >= 4 
+
 #keep <- rowSums(cpm(ddsTxi_) > 1) >= 4
-keep <- rowSums(cpm(txi$counts) > 1) >= 4
+keep <- rowSums(cpm(txi$counts) > 1) >= 4 ## This approach leaves 26000
 
-ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+
+#ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
+
 #ddsTxi <- ddsTxi_
-ddsTxi <- ddsTxi_[keep,]
 
+ddsTxi <- ddsTxi_[keep,]
+ddsTxi <- ddsTxi_[keep.group,]
 
 dds <- DESeq(ddsTxi)
 res <- results(dds,contrast = c("Treatment","W","L"))
@@ -55,7 +74,7 @@ head(res[order(res$padj),])
 sum(res$padj<0.05,na.rm=TRUE)
 
 ## Plot MA of all points
-plotMA(res)
+DESeq2::plotMA(res)
 
 ## Get just the genes that are significant
 res_sig <- res[res$padj < 0.05 & !is.na(res$padj),]
