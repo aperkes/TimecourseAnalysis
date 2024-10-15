@@ -2,13 +2,14 @@
 
 #install.packages("BiocManager", repos = "https://cloud.r-project.org")
 
-#library('BiocManager')
+library('BiocManager')
 ## For some reason this hasn't worked inside the script,
 # Had to install via R terminal
 #BiocManager::install('DESeq2')
 #BiocManager::install('tximport')
 
-#BiocManager::install('edgeR','limma','statmod','affycoretools','ReportingTools')
+#BiocManager::install('edgeR')
+#BioCManager::install('limma','statmod','affycoretools','ReportingTools')
 
 library('DESeq2')
 library('tximport')
@@ -28,6 +29,7 @@ head(samples[,c("Treatment",'Time','Batch')])
 
 script_dir = "~/Documents/Scripts/TimecourseAnalysis"
 data_dir = "/data/sequencing/TimeFights/results/Salmon_quant"
+data_dir = "/data/Salmon_quant/"
 data_dir = "~/Documents/Data/Salmon_quant"
 
 files <-file.path(data_dir,samples$SampleName)
@@ -39,7 +41,7 @@ head(files)
 #txi <- tximport(files,type= "salmon",tx2gene=tx2gene)
 txi <- tximport(files,type= "salmon",txOut = TRUE)
 
-## only keep 
+## filtering at the group level.
 countsPM.bool <- cpm(txi$counts) > 1
 countsPM.num <- 1*countsPM.bool
 group_sums <- rowsum(t(countsPM.num),samples$Group)
@@ -53,19 +55,27 @@ keep.group <- apply(group_sums,2,FUN=min) >= 4
 keep.group <- apply(group_sums,2,FUN=max) >= 4 
 
 #keep <- rowSums(cpm(ddsTxi_) > 1) >= 4
+## Keep genes with greater than 1 cpm for at least 4 samples. 
 keep <- rowSums(cpm(txi$counts) > 1) >= 4 ## This approach leaves 26000
 
+samples$Batch <- as.factor(samples$Batch)
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time)
+#ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
+#ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment)
 
-#ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
-ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
 
 #ddsTxi <- ddsTxi_
 
+## If we do 0 filtering, we get 56,000 rows
 ddsTxi <- ddsTxi_[keep,]
 ddsTxi <- ddsTxi_[keep.group,]
 
-dds <- DESeq(ddsTxi)
-res <- results(dds,contrast = c("Treatment","W","L"))
+dds <- DESeq(ddsTxi_)
+res <- results(dds,contrast = c("Treatment","W","S"))
+
+dds %>% 
+  vst %>% plotPCA(intgroup=c("Batch","Treatment")) 
 
 head(res)
 resOrdered <- res[order(res$padj),]
