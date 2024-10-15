@@ -15,7 +15,7 @@ library('DESeq2')
 library('vegan')
 library('ape')
 
-setwd("/data/sequencing/TimeFights/analysis")
+#setwd("/data/sequencing/TimeFights/analysis")
 setwd("~/Documents/Scripts/TimecourseAnalysis/")
 
 countdata_1 <- read.delim("all_quant_.sf", header=TRUE, row.names="Name") #read in the file of the count data and call it countdata, row.names tells the name in the top left cell, the gene names
@@ -24,6 +24,7 @@ countdata_1 <- round(countdata_1)
 
 keep <- rowSums(cpm(countdata_1)>1) >=4
 # keeps rows (genes) where at least 4 columns (libraries) have at least 1 count per million. This means that if a gene is only expressed in say one treatment (which has three replicates), this gene will not be thrown out of the analysis
+## This should be 4 per treatment, not across the whole set ###
 
 countdata <- countdata_1[keep,] #formatting for organizing the kept rows that summed to at least 1 cpm in the step above
 

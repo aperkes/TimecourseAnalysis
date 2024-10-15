@@ -14,6 +14,10 @@ library('DESeq2')
 library('tximport')
 library('jsonlite')
 #library('ggplot2')
+library("edgeR")
+#library("statmod")
+#library('vegan')
+#library('ape')
 
 
 samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
