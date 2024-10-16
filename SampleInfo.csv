@@ -11,7 +11,7 @@ Index,SampleName,Organism,TissueType,Concentration,Volume,Nanodrop280,Nanodrop23
 10,BSF135,molly,Brain,121,15,2.03,0.51,SF,135,S,F,1
 11,BWB165,molly,Brain,81.1,15,2.04,0.52,WB,165,W,B,1
 12,BLE107,molly,Brain,91.4,15,2.05,0.54,LE,107,L,E,1
-13,BFF136,molly,Brain,82,15,2.06,1.75,FF,136,L,F,1
+13,BFF136,molly,Brain,82,15,2.06,1.75,LF,136,L,F,1
 14,BSA114,molly,Brain,80.8,15,1.98,1.07,SA,114,S,A,1
 15,BWG106,molly,Brain,102.2,15,1.94,0.47,WG,106,W,G,1
 16,BWD151,molly,Brain,46.1,15,2.04,1.49,WD,151,W,D,1
@@ -65,8 +65,8 @@ Index,SampleName,Organism,TissueType,Concentration,Volume,Nanodrop280,Nanodrop23
 64,BLE206,molly,Brain,44,15,2.06,1.95,LE,206,L,E,2
 65,BSF217,molly,Brain,84.3,15,2.09,20.5,SF,217,S,F,2
 66,BWA307,molly,Brain,52.4,15,2.1,1.72,WA,307,W,A,3
-67,BLG306,molly,Brain,86.7,15,2.01,0.66,LG,306,L,G,3
-68,BSD334,molly,Brain,72.6,15,2.09,1.98,SD,334,S,G,3
+67,BLG306,molly,Brain,86.7,15,2.01,0.66,LB,306,L,B,3
+68,BSD334,molly,Brain,72.6,15,2.09,1.98,SG,334,S,G,3
 69,BWD250,molly,Brain,56.1,15,2.04,0.35,WD,250,W,D,2
 70,BLE248,molly,Brain,78.5,15,2.05,1.77,LE,248,L,E,2
 71,BSF255,molly,Brain,70.2,15,2.06,2.04,SF,255,S,F,2
