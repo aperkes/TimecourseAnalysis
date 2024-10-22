@@ -23,14 +23,18 @@ library("edgeR")
 
 samples <- read.csv('~/Documents/Scripts/TimecourseAnalysis/SampleInfo.csv',header=TRUE)
 rownames(samples) <- samples$SampleName
-samples['BFF136','Group'] <- 'LF' ## There's a typo in one sample name
+#samples['BFF136','Group'] <- 'LF' ## There's are some typos in the sample names
 
+
+samples$Batch <- as.factor(samples$Batch)
+samples.23 <- samples[samples$Batch != 1,]
+samples.23A <- samples[samples$Time == 'A',]
+samples <- samples.23A
 head(samples[,c("Treatment",'Time','Batch')])
 
 script_dir = "~/Documents/Scripts/TimecourseAnalysis"
 data_dir = "/data/sequencing/TimeFights/results/Salmon_quant"
-data_dir = "/data/Salmon_quant/"
-data_dir = "~/Documents/Data/Salmon_quant"
+#data_dir = "~/Documents/Data/Salmon_quant"
 
 files <-file.path(data_dir,samples$SampleName)
 files <- paste(sep="",files,".quant/quant.sf")
@@ -45,6 +49,9 @@ txi <- tximport(files,type= "salmon",txOut = TRUE)
 countsPM.bool <- cpm(txi$counts) > 1
 countsPM.num <- 1*countsPM.bool
 group_sums <- rowsum(t(countsPM.num),samples$Group)
+
+## Check group sums: 
+apply(group_sums,1,FUN=max)
 
 ## What this is saying is that it's in at least 
 ##  four samples for every group. 
@@ -64,24 +71,31 @@ ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment +
 #ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
 #ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment)
 
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
 
-#ddsTxi <- ddsTxi_
+ddsTxi_.F <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
+ddsTxi.F <- ddsTxi_.F[,samples$Time == 'F']
+dds.F <- DESeq(ddsTxi.F)
+res.F <- results(dds,contrast = c("Treatment","W","S"))
+DESeq2::plotMA(res.F)
 
-## If we do 0 filtering, we get 56,000 rows
+ddsTxi <- ddsTxi_
 ddsTxi <- ddsTxi_[keep,]
 ddsTxi <- ddsTxi_[keep.group,]
 
-dds <- DESeq(ddsTxi_)
-res <- results(dds,contrast = c("Treatment","W","S"))
 
-dds %>% 
-  vst %>% plotPCA(intgroup=c("Batch","Treatment")) 
+
+dds <- DESeq(ddsTxi)
+keep2 <- rowSums(counts(dds) >= 10) >= 4
+dds <- dds[keep2,]
+res <- results(dds,contrast = c("Treatment","W","L"))
 
 head(res)
 resOrdered <- res[order(res$padj),]
 head(res[order(res$padj),])
 
-sum(res$padj<0.05,na.rm=TRUE)
+sum(res$padj<0.1,na.rm=TRUE)
 
 ## Plot MA of all points
 DESeq2::plotMA(res)
