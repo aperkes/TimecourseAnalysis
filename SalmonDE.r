@@ -28,8 +28,8 @@ rownames(samples) <- samples$SampleName
 
 samples$Batch <- as.factor(samples$Batch)
 samples.23 <- samples[samples$Batch != 1,]
-samples.23A <- samples[samples$Time == 'A',]
-samples <- samples.23A
+samples.23A <- samples.23[samples.23$Time == 'A',]
+#samples <- samples.23A
 head(samples[,c("Treatment",'Time','Batch')])
 
 script_dir = "~/Documents/Scripts/TimecourseAnalysis"
@@ -55,11 +55,11 @@ apply(group_sums,1,FUN=max)
 
 ## What this is saying is that it's in at least 
 ##  four samples for every group. 
-keep.group <- apply(group_sums,2,FUN=min) >= 4 
+keep.group <- apply(group_sums,2,FUN=min) >= 4  ## This approach leaves 12000
 
 ## Alternatively, I could use max to say that it's in at least 
 ##  4 samples for at least 1 group. 
-keep.group <- apply(group_sums,2,FUN=max) >= 4 
+keep.group <- apply(group_sums,2,FUN=max) >= 4 ## This approach leaves 19000
 
 #keep <- rowSums(cpm(ddsTxi_) > 1) >= 4
 ## Keep genes with greater than 1 cpm for at least 4 samples. 
@@ -67,9 +67,9 @@ keep <- rowSums(cpm(txi$counts) > 1) >= 4 ## This approach leaves 26000
 
 samples$Batch <- as.factor(samples$Batch)
 ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
-ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time)
+jddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time)
 #ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
-#ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment)
+ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
 
 ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Time + Batch)
 ddsTxi_ <- DESeqDataSetFromTximport(txi,colData = samples,design = ~ Treatment + Batch)
@@ -84,17 +84,16 @@ ddsTxi <- ddsTxi_
 ddsTxi <- ddsTxi_[keep,]
 ddsTxi <- ddsTxi_[keep.group,]
 
-
-
 dds <- DESeq(ddsTxi)
 keep2 <- rowSums(counts(dds) >= 10) >= 4
-dds <- dds[keep2,]
+#dds <- dds[keep.group,]
 res <- results(dds,contrast = c("Treatment","W","L"))
 
 head(res)
 resOrdered <- res[order(res$padj),]
-head(res[order(res$padj),])
-
+resOrdered.lfc <- res[order(res$log2FoldChange),]
+head(resOrdered)
+head(resOrdered.lfc)
 sum(res$padj<0.1,na.rm=TRUE)
 
 ## Plot MA of all points
